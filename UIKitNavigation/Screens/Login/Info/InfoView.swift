@@ -18,13 +18,13 @@ struct InfoView: View {
                 Spacer()
             }
             .padding(.leading)
-            HStack {
-                Text("Please provide us with few more details")
-                    .font(.system(size: 16, weight: .light))
-                Spacer()
-            }
-            .padding(.leading)
             .padding(.bottom)
+            
+            Spacer()
+    
+            Text("Thanks for joining Evening Brew !")
+                .foregroundColor(.mainColor)
+                .font(.system(size: 23, weight: .light))
 
             Spacer()
             XButton(title: "Continue") {

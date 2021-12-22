@@ -18,12 +18,23 @@ class MainTabBarRouter: RouterProtocol {
     init(services: Services) {
         self.services = services
     }
+    
+    private lazy var homeRouter: HomeRouter = {
+        HomeRouter(services: self.services)
+    }()
+    
+    private lazy var settingsRouter: SettingsRouter = {
+        SettingsRouter(services: self.services)
+    }()
 
     deinit {}
 
     // MARK: - Methods
 
     func start() -> UIViewController {
-        MainTabBar()
+        MainTabBar(viewControllers: [
+            homeRouter.start(),
+            settingsRouter.start()
+        ])
     }
 }

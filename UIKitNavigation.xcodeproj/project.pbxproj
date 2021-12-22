@@ -26,6 +26,9 @@
 		837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F6276A854300B45ECA /* SettingsViewController.swift */; };
 		837183F9276A855900B45ECA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F8276A855900B45ECA /* SettingsView.swift */; };
 		837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */; };
+		838BA53327732960002DB251 /* GXBaseAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 838BA53227732960002DB251 /* GXBaseAPI */; };
+		838BA53727732CF1002DB251 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53627732CF1002DB251 /* SettingsRouter.swift */; };
+		838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53827732D9B002DB251 /* HomeRouter.swift */; };
 		83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */; };
 		83FCE7722771E1B700552B98 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */; };
 		83FCE7742771E1C200552B98 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */; };
@@ -73,6 +76,8 @@
 		837183F6276A854300B45ECA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		837183F8276A855900B45ECA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + SwiftUI.swift"; sourceTree = "<group>"; };
+		838BA53627732CF1002DB251 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		838BA53827732D9B002DB251 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
 		83FCE76C2771E10200552B98 /* GXBaseAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GXBaseAPI; path = ../GXBaseAPI; sourceTree = "<group>"; };
 		83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FCE7802771F9B100552B98 /* GXUtilz in Frameworks */,
+				838BA53327732960002DB251 /* GXBaseAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,7 @@
 				83FCE76B2771E10200552B98 /* Packages */,
 				8347E0EA2769C6FB0047E977 /* UIKitNavigation */,
 				8347E0E92769C6FB0047E977 /* Products */,
+				838BA53127732960002DB251 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,9 +264,34 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		838BA53127732960002DB251 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		838BA53427732CDA002DB251 /* HomeRouter */ = {
+			isa = PBXGroup;
+			children = (
+				838BA53827732D9B002DB251 /* HomeRouter.swift */,
+			);
+			path = HomeRouter;
+			sourceTree = "<group>";
+		};
+		838BA53527732CE4002DB251 /* SettingsRouter */ = {
+			isa = PBXGroup;
+			children = (
+				838BA53627732CF1002DB251 /* SettingsRouter.swift */,
+			);
+			path = SettingsRouter;
+			sourceTree = "<group>";
+		};
 		83FCE75D2771D96D00552B98 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				838BA53527732CE4002DB251 /* SettingsRouter */,
+				838BA53427732CDA002DB251 /* HomeRouter */,
 				83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */,
 			);
 			path = MainTabBar;
@@ -434,6 +466,7 @@
 			name = UIKitNavigation;
 			packageProductDependencies = (
 				83FCE77F2771F9B100552B98 /* GXUtilz */,
+				838BA53227732960002DB251 /* GXBaseAPI */,
 			);
 			productName = UIKitNavigation;
 			productReference = 8347E0E82769C6FB0047E977 /* UIKitNavigation.app */;
@@ -501,6 +534,7 @@
 				83FCE77D2771F86500552B98 /* Color.swift in Sources */,
 				83FCE7932772143100552B98 /* EnterCodeViewController.swift in Sources */,
 				837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */,
+				838BA53727732CF1002DB251 /* SettingsRouter.swift in Sources */,
 				8347E1012769C9250047E977 /* MainTabBar.swift in Sources */,
 				8347E0F02769C6FB0047E977 /* HomeViewController.swift in Sources */,
 				8347E1092769CC150047E977 /* DetailHomeViewController.swift in Sources */,
@@ -515,6 +549,7 @@
 				8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */,
 				8347E10B2769CC2E0047E977 /* DetailHomeView.swift in Sources */,
 				83FCE7772771E32B00552B98 /* OnboardingModel.swift in Sources */,
+				838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */,
 				8358F6562770DA42006779CF /* OnboardingViewModel.swift in Sources */,
 				83FCE79E277226A500552B98 /* InfoViewController.swift in Sources */,
 				8358F6482770B7AB006779CF /* OnboardingViewController.swift in Sources */,
@@ -753,6 +788,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		838BA53227732960002DB251 /* GXBaseAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GXBaseAPI;
+		};
 		83FCE77F2771F9B100552B98 /* GXUtilz */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */;

@@ -10,22 +10,21 @@ import UIKit
 
 class MainTabBar: UITabBarController {
     
+    private var tabs: [UIViewController] = []
+    
+    init(viewControllers: [UIViewController]) {
+        self.tabs = viewControllers
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [
-            generateNavigationController(rootVC: HomeViewController(), title: "Home", image: UIImage(systemName: "house")!),
-            generateNavigationController(rootVC: SettingsViewController(), title: "Settings", image: UIImage(systemName: "gear")!)
-        ]
+        viewControllers = self.tabs
     }
     
-    
-    private func generateNavigationController(rootVC: UIViewController, title: String, image: UIImage) -> UIViewController {
-        let navigationVC = UINavigationController(rootViewController: rootVC)
-        navigationVC.navigationBar.topItem?.title = title
-        navigationVC.navigationBar.prefersLargeTitles = true
-        navigationVC.tabBarItem.title = title
-        navigationVC.tabBarItem.image = image
-        return navigationVC
-    }
 }
