@@ -8,92 +8,54 @@
 import SwiftUI
 
 struct HomeView: View {
-    var pushToDetailVC: () -> Void
+    @StateObject var viewModel: HomeViewModel
     var body: some View {
         ScrollView {
+            HStack {
+                Text("Popular Liquor")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            .padding([.horizontal, .bottom])
             VStack {
-                HStack {
-                    Text("News")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .padding(.bottom)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<10) { item in
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.green)
-                                .frame(width: 150, height: 150, alignment: .center)
-                        }
+                switch viewModel.loadState {
+                case .idle:
+                    ForEach(0..<10) { item in
+                        AlcoCard(alcoTitle: "aaafaf123a", alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: "")
                     }
-                    .padding(.horizontal)
-                }
-            }
-            
-            VStack {
-                HStack {
-                    Text("Info")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .padding(.bottom)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<10) { item in
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(item % 2 == 0 ? Color.red : Color.blue)
-                                .frame(width: 150, height: 150, alignment: .center)
+                    .redacted(reason: .placeholder)
+                case .loading:
+                    ZStack {
+                        VStack {
+                            ForEach(0..<10) { item in
+                                AlcoCard(alcoTitle: "aaafaf123a", alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: "")
+                                    .opacity(0.9)
+                            }
+                            .redacted(reason: .placeholder)
                         }
+
+                        ProgressView()
                     }
-                    .padding(.horizontal)
+                case .fail:
+                    Text("Error")
+                case .success:
+                    ForEach(viewModel.alcoData.drinks, id: \.self.idDrink) { item in
+                        AlcoCard(alcoTitle: item.strDrink, alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: item.strDrinkThumb)
+                    }
                 }
-            }
-            
-            VStack {
-                HStack {
-                    Text("Company")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .padding(.bottom)
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.cyan)
-                    .frame(width: 250, height: 200, alignment: .leading)
-            }
-            
-            LazyVGrid(columns: [
-                GridItem(.flexible(minimum: 50, maximum: 180), spacing: 10, alignment: .center),
-                GridItem(.flexible(minimum: 50, maximum: 180), spacing: 10, alignment: .center)]) {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.yellow)
-                            .frame(height: 200, alignment: .leading)
-                    
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.purple)
-                            .frame(height: 200, alignment: .leading)
-                    
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.orange)
-                        .frame(height: 200, alignment: .leading)
-                
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.green)
-                        .frame(height: 200, alignment: .leading)
 
             }
-
+            
+        }
+        .onAppear {
+            viewModel.getAlcoDrinks()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(pushToDetailVC: {})
+        HomeView(viewModel: HomeViewModel(services: AppServices(), presenter: HomePresenter(interacor: HomeInteracor())))
     }
 }

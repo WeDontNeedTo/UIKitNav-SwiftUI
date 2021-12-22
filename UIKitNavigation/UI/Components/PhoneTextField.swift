@@ -24,8 +24,7 @@ struct PhoneTextField: View {
     }
     
     var border: some View {
-      RoundedRectangle(cornerRadius: 6)
-        .strokeBorder(Color.secondary, lineWidth: 1)
+        XBorder()
     }
 }
 

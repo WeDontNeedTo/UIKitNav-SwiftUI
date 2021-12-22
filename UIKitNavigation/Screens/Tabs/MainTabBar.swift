@@ -23,8 +23,8 @@ class MainTabBar: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewControllers = self.tabs
     }
+
     
 }

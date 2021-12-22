@@ -29,6 +29,20 @@
 		838BA53327732960002DB251 /* GXBaseAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 838BA53227732960002DB251 /* GXBaseAPI */; };
 		838BA53727732CF1002DB251 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53627732CF1002DB251 /* SettingsRouter.swift */; };
 		838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53827732D9B002DB251 /* HomeRouter.swift */; };
+		838BA53B27733063002DB251 /* AlcoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53A27733063002DB251 /* AlcoCard.swift */; };
+		838BA53D27733190002DB251 /* XBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53C27733190002DB251 /* XBorder.swift */; };
+		838BA53F277335FA002DB251 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53E277335FA002DB251 /* HomeViewModel.swift */; };
+		838BA54127733631002DB251 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA54027733631002DB251 /* Constants.swift */; };
+		838BA544277336D9002DB251 /* AlcoDrinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA543277336D9002DB251 /* AlcoDrinks.swift */; };
+		838BA54627734815002DB251 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA54527734815002DB251 /* HomeInteractor.swift */; };
+		838BA5482773493C002DB251 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA5472773493C002DB251 /* HomePresenter.swift */; };
+		838BA54A2773494E002DB251 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA5492773494E002DB251 /* BasePresenter.swift */; };
+		838BA54D27734CEC002DB251 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */; };
+		838BA550277357CB002DB251 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 838BA54E277357CB002DB251 /* Model.xcdatamodeld */; };
+		838BA5532773582A002DB251 /* AlcoDrinkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA5522773582A002DB251 /* AlcoDrinkDTO.swift */; };
+		838BA55527735857002DB251 /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA55427735857002DB251 /* CoreDataManagerProtocol.swift */; };
+		838BA55727735869002DB251 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA55627735869002DB251 /* CoreDataManager.swift */; };
+		838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA559277375A2002DB251 /* HomeDBManager.swift */; };
 		83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */; };
 		83FCE7722771E1B700552B98 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */; };
 		83FCE7742771E1C200552B98 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */; };
@@ -50,7 +64,7 @@
 		83FCE79B277223CE00552B98 /* EnterCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE79A277223CE00552B98 /* EnterCodeRouter.swift */; };
 		83FCE79E277226A500552B98 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE79D277226A500552B98 /* InfoViewController.swift */; };
 		83FCE7A0277226AF00552B98 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE79F277226AF00552B98 /* InfoView.swift */; };
-		83FCE7A42772308B00552B98 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7A32772308B00552B98 /* Network.swift */; };
+		83FCE7A42772308B00552B98 /* HomeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7A32772308B00552B98 /* HomeAPIManager.swift */; };
 		83FCE7A62772309700552B98 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7A52772309700552B98 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +92,19 @@
 		837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + SwiftUI.swift"; sourceTree = "<group>"; };
 		838BA53627732CF1002DB251 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		838BA53827732D9B002DB251 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		838BA53A27733063002DB251 /* AlcoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCard.swift; sourceTree = "<group>"; };
+		838BA53C27733190002DB251 /* XBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XBorder.swift; sourceTree = "<group>"; };
+		838BA53E277335FA002DB251 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		838BA54027733631002DB251 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		838BA543277336D9002DB251 /* AlcoDrinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoDrinks.swift; sourceTree = "<group>"; };
+		838BA54527734815002DB251 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		838BA5472773493C002DB251 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		838BA5492773494E002DB251 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		838BA54F277357CB002DB251 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		838BA5522773582A002DB251 /* AlcoDrinkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoDrinkDTO.swift; sourceTree = "<group>"; };
+		838BA55427735857002DB251 /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
+		838BA55627735869002DB251 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		838BA559277375A2002DB251 /* HomeDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDBManager.swift; sourceTree = "<group>"; };
 		83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
 		83FCE76C2771E10200552B98 /* GXBaseAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GXBaseAPI; path = ../GXBaseAPI; sourceTree = "<group>"; };
 		83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
@@ -99,7 +126,7 @@
 		83FCE79A277223CE00552B98 /* EnterCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeRouter.swift; sourceTree = "<group>"; };
 		83FCE79D277226A500552B98 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		83FCE79F277226AF00552B98 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		83FCE7A32772308B00552B98 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		83FCE7A32772308B00552B98 /* HomeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIManager.swift; sourceTree = "<group>"; };
 		83FCE7A52772309700552B98 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838BA54D27734CEC002DB251 /* SDWebImageSwiftUI in Frameworks */,
 				83FCE7802771F9B100552B98 /* GXUtilz in Frameworks */,
 				838BA53327732960002DB251 /* GXBaseAPI in Frameworks */,
 			);
@@ -177,6 +205,7 @@
 				8347E1072769CB8F0047E977 /* Detail */,
 				8347E0EF2769C6FB0047E977 /* HomeViewController.swift */,
 				8347E1052769C9BC0047E977 /* HomeView.swift */,
+				838BA53E277335FA002DB251 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -287,6 +316,34 @@
 			path = SettingsRouter;
 			sourceTree = "<group>";
 		};
+		838BA542277336D0002DB251 /* AlcoDrinks */ = {
+			isa = PBXGroup;
+			children = (
+				838BA543277336D9002DB251 /* AlcoDrinks.swift */,
+			);
+			path = AlcoDrinks;
+			sourceTree = "<group>";
+		};
+		838BA5512773581C002DB251 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				838BA5522773582A002DB251 /* AlcoDrinkDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		838BA5582773758C002DB251 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				838BA55427735857002DB251 /* CoreDataManagerProtocol.swift */,
+				838BA54E277357CB002DB251 /* Model.xcdatamodeld */,
+				838BA5512773581C002DB251 /* DTO */,
+				838BA55627735869002DB251 /* CoreDataManager.swift */,
+				83FCE7A52772309700552B98 /* Persistence.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		83FCE75D2771D96D00552B98 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				837183FA276A889A00B45ECA /* Extension */,
+				838BA54027733631002DB251 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -308,6 +366,7 @@
 		83FCE7612771DCD900552B98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				838BA542277336D0002DB251 /* AlcoDrinks */,
 				83FCE7752771E31F00552B98 /* Onboarding */,
 			);
 			path = Models;
@@ -344,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */,
+				838BA54527734815002DB251 /* HomeInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -352,6 +412,8 @@
 			isa = PBXGroup;
 			children = (
 				83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */,
+				838BA5472773493C002DB251 /* HomePresenter.swift */,
+				838BA5492773494E002DB251 /* BasePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -367,7 +429,8 @@
 		83FCE76F2771E14F00552B98 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				83FCE7A52772309700552B98 /* Persistence.swift */,
+				838BA5582773758C002DB251 /* Shared */,
+				838BA559277375A2002DB251 /* HomeDBManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -375,7 +438,7 @@
 		83FCE7702771E15F00552B98 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				83FCE7A32772308B00552B98 /* Network.swift */,
+				83FCE7A32772308B00552B98 /* HomeAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -405,6 +468,8 @@
 				83FCE78F27720D3E00552B98 /* PhoneTextField.swift */,
 				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
 				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
+				838BA53A27733063002DB251 /* AlcoCard.swift */,
+				838BA53C27733190002DB251 /* XBorder.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -467,6 +532,7 @@
 			packageProductDependencies = (
 				83FCE77F2771F9B100552B98 /* GXUtilz */,
 				838BA53227732960002DB251 /* GXBaseAPI */,
+				838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */,
 			);
 			productName = UIKitNavigation;
 			productReference = 8347E0E82769C6FB0047E977 /* UIKitNavigation.app */;
@@ -498,6 +564,7 @@
 			mainGroup = 8347E0DF2769C6FB0047E977;
 			packageReferences = (
 				83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */,
+				838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 8347E0E92769C6FB0047E977 /* Products */;
 			projectDirPath = "";
@@ -525,10 +592,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838BA55727735869002DB251 /* CoreDataManager.swift in Sources */,
 				83FCE7892772083D00552B98 /* LoginViewController.swift in Sources */,
 				83FCE7722771E1B700552B98 /* OnboardingPresenter.swift in Sources */,
 				83FCE79727721B4600552B98 /* SMSCodeView.swift in Sources */,
 				83FCE79527721AD900552B98 /* EnterCodeView.swift in Sources */,
+				838BA53B27733063002DB251 /* AlcoCard.swift in Sources */,
 				83FCE77B2771F85300552B98 /* StartView.swift in Sources */,
 				83FCE79B277223CE00552B98 /* EnterCodeRouter.swift in Sources */,
 				83FCE77D2771F86500552B98 /* Color.swift in Sources */,
@@ -538,17 +607,21 @@
 				8347E1012769C9250047E977 /* MainTabBar.swift in Sources */,
 				8347E0F02769C6FB0047E977 /* HomeViewController.swift in Sources */,
 				8347E1092769CC150047E977 /* DetailHomeViewController.swift in Sources */,
-				83FCE7A42772308B00552B98 /* Network.swift in Sources */,
+				83FCE7A42772308B00552B98 /* HomeAPIManager.swift in Sources */,
+				838BA5482773493C002DB251 /* HomePresenter.swift in Sources */,
 				837183F9276A855900B45ECA /* SettingsView.swift in Sources */,
 				83FCE7A0277226AF00552B98 /* InfoView.swift in Sources */,
+				838BA53D27733190002DB251 /* XBorder.swift in Sources */,
 				83FCE7822771FFB100552B98 /* PageDots.swift in Sources */,
 				83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */,
 				83FCE7872772083400552B98 /* LoginView.swift in Sources */,
 				8358F6542770D9E8006779CF /* OnboardingRouter.swift in Sources */,
 				8358F6512770D20B006779CF /* LoginManager.swift in Sources */,
+				838BA53F277335FA002DB251 /* HomeViewModel.swift in Sources */,
 				8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */,
 				8347E10B2769CC2E0047E977 /* DetailHomeView.swift in Sources */,
 				83FCE7772771E32B00552B98 /* OnboardingModel.swift in Sources */,
+				838BA55527735857002DB251 /* CoreDataManagerProtocol.swift in Sources */,
 				838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */,
 				8358F6562770DA42006779CF /* OnboardingViewModel.swift in Sources */,
 				83FCE79E277226A500552B98 /* InfoViewController.swift in Sources */,
@@ -557,14 +630,21 @@
 				83FCE78B2772084500552B98 /* LoginViewModel.swift in Sources */,
 				83FCE784277202D700552B98 /* XButton.swift in Sources */,
 				83FCE78E277208D100552B98 /* LoginRouter.swift in Sources */,
+				838BA544277336D9002DB251 /* AlcoDrinks.swift in Sources */,
+				838BA54127733631002DB251 /* Constants.swift in Sources */,
+				838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */,
 				8358F64E2770D1CE006779CF /* AppServices.swift in Sources */,
 				83FCE79927721B7200552B98 /* SMSBlocks.swift in Sources */,
+				838BA54627734815002DB251 /* HomeInteractor.swift in Sources */,
 				8347E0EE2769C6FB0047E977 /* SceneDelegate.swift in Sources */,
 				83FCE7A62772309700552B98 /* Persistence.swift in Sources */,
+				838BA54A2773494E002DB251 /* BasePresenter.swift in Sources */,
 				8358F64B2770D14D006779CF /* AppRouter.swift in Sources */,
 				837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */,
 				8358F6462770B79A006779CF /* OnboardingView.swift in Sources */,
+				838BA550277357CB002DB251 /* Model.xcdatamodeld in Sources */,
 				83FCE79027720D3E00552B98 /* PhoneTextField.swift in Sources */,
+				838BA5532773582A002DB251 /* AlcoDrinkDTO.swift in Sources */,
 				83FCE7742771E1C200552B98 /* OnboardingInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,6 +857,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GARPIX-iOS/garpix_utils";
@@ -792,12 +880,30 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = GXBaseAPI;
 		};
+		838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		83FCE77F2771F9B100552B98 /* GXUtilz */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */;
 			productName = GXUtilz;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		838BA54E277357CB002DB251 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				838BA54F277357CB002DB251 /* Model.xcdatamodel */,
+			);
+			currentVersion = 838BA54F277357CB002DB251 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8347E0E02769C6FB0047E977 /* Project object */;
 }
