@@ -60,11 +60,11 @@ class AppRouter: RouterProtocol {
     func start() {
         switch screen {
         case .onboarding:
-            window.rootViewController = onBoardingRouter.showOnboarding()
+            window.switchRootViewController(onBoardingRouter.showOnboarding())
         case .tab:
-            window.rootViewController = mainTabBarRouter.showTabBar()
+            window.switchRootViewController(mainTabBarRouter.showTabBar())
         case .login:
-            window.rootViewController = loginRouter.start()
+            window.switchRootViewController(loginRouter.start())
         }
         window.makeKeyAndVisible()
     }
