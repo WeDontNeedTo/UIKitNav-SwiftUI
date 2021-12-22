@@ -23,7 +23,7 @@ class OnboardingRouter: RouterProtocol {
 
     // MARK: - Methods
 
-    func showOnboarding() -> UIViewController {
+    func start() -> UIViewController {
         let viewModel = OnboardingViewModel(services: services, presenter: OnboardingPresenter(interactor: OnboardingInteractor()))
         return OnboardingViewController(viewModel: viewModel)
     }

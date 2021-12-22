@@ -23,7 +23,7 @@ class MainTabBarRouter: RouterProtocol {
 
     // MARK: - Methods
 
-    func showTabBar() -> UIViewController {
+    func start() -> UIViewController {
         MainTabBar()
     }
 }

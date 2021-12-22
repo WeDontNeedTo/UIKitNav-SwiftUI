@@ -60,9 +60,9 @@ class AppRouter: RouterProtocol {
     func start() {
         switch screen {
         case .onboarding:
-            window.switchRootViewController(onBoardingRouter.showOnboarding())
+            window.switchRootViewController(onBoardingRouter.start())
         case .tab:
-            window.switchRootViewController(mainTabBarRouter.showTabBar())
+            window.switchRootViewController(mainTabBarRouter.start())
         case .login:
             window.switchRootViewController(loginRouter.start())
         }
