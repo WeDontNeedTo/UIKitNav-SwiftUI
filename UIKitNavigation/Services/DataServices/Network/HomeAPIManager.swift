@@ -19,4 +19,8 @@ class HomeAPIManager: BaseAPIManagerProtocol {
         return fetch(endpoint: endpoint)
     }
     
+    func getCategories(endpoint: APICall) -> AnyPublisher<AlcoCategories, Error> {
+        return fetch(endpoint: endpoint)
+    }
+    
 }

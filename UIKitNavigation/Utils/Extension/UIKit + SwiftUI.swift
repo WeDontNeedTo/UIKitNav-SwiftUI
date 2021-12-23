@@ -100,3 +100,15 @@ extension UIImage {
         return self
     }
 }
+
+extension UIViewController {
+    func pinEdges(of viewA: UIView, to viewB: UIView) {
+        viewA.translatesAutoresizingMaskIntoConstraints = false
+        viewB.addConstraints([
+            viewA.leadingAnchor.constraint(equalTo: viewB.leadingAnchor),
+            viewA.trailingAnchor.constraint(equalTo: viewB.trailingAnchor),
+            viewA.topAnchor.constraint(equalTo: viewB.topAnchor),
+            viewA.bottomAnchor.constraint(equalTo: viewB.bottomAnchor),
+        ])
+    }
+}

@@ -26,11 +26,11 @@ class HomeRouter: RouterProtocol {
     // MARK: - Methods
 
     func start() -> UIViewController {
-        let settingsVC = HomeViewController(viewModel: HomeViewModel(services: self.services, presenter: HomePresenter(interacor: HomeInteracor())))
+        let homeVC = HomeViewController(viewModel: HomeViewModel(services: self.services, presenter: HomePresenter(interacor: HomeInteracor())))
         navController.tabBarController?.tabBar.tintColor = .green
         navController.tabBarItem.title = "Home"
         navController.tabBarItem.image = UIImage(systemName: "house")
-        navController.pushViewController(settingsVC, animated: true)
+        navController.pushViewController(homeVC, animated: true)
         return navController
     }
 }

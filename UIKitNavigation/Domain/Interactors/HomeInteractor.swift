@@ -15,7 +15,10 @@ class HomeInteracor {
 
     enum UseCases {
         case getAlcoDrinks
+        case getAlcoCategories
     }
+    
+    // MARK: getAlcoDrinks
     
     func getAlcoDrinksFromWeb() -> AnyPublisher<AlcoDrinkList, Error> {
         HomeAPIManager.shared.getAlcoDrinks(endpoint: UseCases.getAlcoDrinks)
@@ -28,11 +31,43 @@ class HomeInteracor {
     func updateDb(with drinks: [AlcoDrink]) {
         HomeDBManager.shared.updateAlcoDrinks(with: drinks)
     }
+    
+    func deleteOldDrinks() {
+        HomeDBManager.shared.deleteOldDrinks(with: UseCases.getAlcoDrinks.entityName)
+    }
+    
+    
+    // MARK: getAlcoCategories
+
+    func getAlcoCategoriesFromWeb() -> AnyPublisher<AlcoCategories, Error> {
+        HomeAPIManager.shared.getCategories(endpoint: UseCases.getAlcoDrinks)
+    }
+    
+    func getAlcoCategoriesFromDB() -> [AlcoCategory] {
+        HomeDBManager.shared.getAlcoCategoriesFromDB(with: UseCases.getAlcoCategories.entityName)
+    }
+    
+    func updateCategoriesDB(with categories: [AlcoCategory]) {
+        HomeDBManager.shared.updateAlcoCategories(with: categories)
+    }
+    
+
+    func deleteOldCategories() {
+        HomeDBManager.shared.deleteOldCategories(with: UseCases.getAlcoCategories.entityName)
+    }
 }
+
+//MARK: - use cases
 
 extension HomeInteracor.UseCases: DBRequest {
     var entityName: String {
-        return "AlcoDrinkMO"
+        switch self {
+        case .getAlcoCategories:
+            return "AlcoCategoryMO"
+        case .getAlcoDrinks:
+            return "AlcoDrinkMO"
+
+        }
     }
     
 }
@@ -42,6 +77,8 @@ extension HomeInteracor.UseCases: APICall {
         switch self {
         case .getAlcoDrinks:
             return "filter.php?a=Alcoholic"
+        case .getAlcoCategories:
+            return "list.php?c=list"
         }
     }
     

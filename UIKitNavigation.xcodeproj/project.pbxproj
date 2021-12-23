@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830817B22774C71C008BA695 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B12774C71C008BA695 /* PullToRefresh.swift */; };
+		830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B42774CA6A008BA695 /* AlcoCategories.swift */; };
+		830817B72774CB51008BA695 /* AlcoCategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */; };
 		8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0EB2769C6FB0047E977 /* AppDelegate.swift */; };
 		8347E0EE2769C6FB0047E977 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0ED2769C6FB0047E977 /* SceneDelegate.swift */; };
 		8347E0F02769C6FB0047E977 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0EF2769C6FB0047E977 /* HomeViewController.swift */; };
@@ -69,6 +72,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830817B12774C71C008BA695 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		830817B42774CA6A008BA695 /* AlcoCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategories.swift; sourceTree = "<group>"; };
+		830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategoryDTO.swift; sourceTree = "<group>"; };
 		8347E0E82769C6FB0047E977 /* UIKitNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8347E0EB2769C6FB0047E977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8347E0ED2769C6FB0047E977 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830817A727746A66008BA695 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				83FCE77A2771F85300552B98 /* StartView.swift */,
+				83FCE7812771FFB100552B98 /* PageDots.swift */,
+				83FCE783277202D700552B98 /* XButton.swift */,
+				83FCE78F27720D3E00552B98 /* PhoneTextField.swift */,
+				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
+				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
+				838BA53A27733063002DB251 /* AlcoCard.swift */,
+				838BA53C27733190002DB251 /* XBorder.swift */,
+				830817B12774C71C008BA695 /* PullToRefresh.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		830817B32774CA5E008BA695 /* AlcoCategories */ = {
+			isa = PBXGroup;
+			children = (
+				830817B42774CA6A008BA695 /* AlcoCategories.swift */,
+			);
+			path = AlcoCategories;
+			sourceTree = "<group>";
+		};
 		8347E0DF2769C6FB0047E977 = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				838BA5522773582A002DB251 /* AlcoDrinkDTO.swift */,
+				830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -366,6 +397,7 @@
 		83FCE7612771DCD900552B98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				830817B32774CA5E008BA695 /* AlcoCategories */,
 				838BA542277336D0002DB251 /* AlcoDrinks */,
 				83FCE7752771E31F00552B98 /* Onboarding */,
 			);
@@ -462,14 +494,7 @@
 		83FCE7792771F83C00552B98 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				83FCE77A2771F85300552B98 /* StartView.swift */,
-				83FCE7812771FFB100552B98 /* PageDots.swift */,
-				83FCE783277202D700552B98 /* XButton.swift */,
-				83FCE78F27720D3E00552B98 /* PhoneTextField.swift */,
-				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
-				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
-				838BA53A27733063002DB251 /* AlcoCard.swift */,
-				838BA53C27733190002DB251 /* XBorder.swift */,
+				830817A727746A66008BA695 /* SwiftUI */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -598,6 +623,7 @@
 				83FCE79727721B4600552B98 /* SMSCodeView.swift in Sources */,
 				83FCE79527721AD900552B98 /* EnterCodeView.swift in Sources */,
 				838BA53B27733063002DB251 /* AlcoCard.swift in Sources */,
+				830817B72774CB51008BA695 /* AlcoCategoryDTO.swift in Sources */,
 				83FCE77B2771F85300552B98 /* StartView.swift in Sources */,
 				83FCE79B277223CE00552B98 /* EnterCodeRouter.swift in Sources */,
 				83FCE77D2771F86500552B98 /* Color.swift in Sources */,
@@ -612,6 +638,7 @@
 				837183F9276A855900B45ECA /* SettingsView.swift in Sources */,
 				83FCE7A0277226AF00552B98 /* InfoView.swift in Sources */,
 				838BA53D27733190002DB251 /* XBorder.swift in Sources */,
+				830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */,
 				83FCE7822771FFB100552B98 /* PageDots.swift in Sources */,
 				83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */,
 				83FCE7872772083400552B98 /* LoginView.swift in Sources */,
@@ -620,6 +647,7 @@
 				838BA53F277335FA002DB251 /* HomeViewModel.swift in Sources */,
 				8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */,
 				8347E10B2769CC2E0047E977 /* DetailHomeView.swift in Sources */,
+				830817B22774C71C008BA695 /* PullToRefresh.swift in Sources */,
 				83FCE7772771E32B00552B98 /* OnboardingModel.swift in Sources */,
 				838BA55527735857002DB251 /* CoreDataManagerProtocol.swift in Sources */,
 				838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */,

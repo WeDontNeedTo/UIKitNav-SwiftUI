@@ -24,6 +24,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+//        self.navigationItem.titleView = UIButton(type: .system)
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
         addSubSwiftUIView(HomeView(viewModel: self.viewModel), to: view)
     }
 }
