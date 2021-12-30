@@ -40,7 +40,7 @@ class HomeInteracor {
     // MARK: getAlcoCategories
 
     func getAlcoCategoriesFromWeb() -> AnyPublisher<AlcoCategories, Error> {
-        HomeAPIManager.shared.getCategories(endpoint: UseCases.getAlcoDrinks)
+        HomeAPIManager.shared.getCategories(endpoint: UseCases.getAlcoCategories)
     }
     
     func getAlcoCategoriesFromDB() -> [AlcoCategory] {

@@ -49,7 +49,7 @@ class OnboardingViewModel: BaseViewModel<Services>, ObservableObject {
             case .success(let data):
                 self.onboardingData = data
                 self.loadState = .success
-            case .failure(let error):
+            case .failure(_):
                 self.loadState = .fail
             }
         }

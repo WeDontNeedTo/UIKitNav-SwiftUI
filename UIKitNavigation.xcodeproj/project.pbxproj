@@ -26,6 +26,9 @@
 		8358F6512770D20B006779CF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F6502770D20B006779CF /* LoginManager.swift */; };
 		8358F6542770D9E8006779CF /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F6532770D9E8006779CF /* OnboardingRouter.swift */; };
 		8358F6562770DA42006779CF /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F6552770DA42006779CF /* OnboardingViewModel.swift */; };
+		836587C5277DA00F00296AE2 /* CategoryBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587C4277DA00F00296AE2 /* CategoryBubble.swift */; };
+		836587C8277DA0F400296AE2 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587C7277DA0F400296AE2 /* CategoryList.swift */; };
+		836587CB277DA4E300296AE2 /* AlcoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587CA277DA4E300296AE2 /* AlcoList.swift */; };
 		837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F6276A854300B45ECA /* SettingsViewController.swift */; };
 		837183F9276A855900B45ECA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F8276A855900B45ECA /* SettingsView.swift */; };
 		837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */; };
@@ -93,6 +96,9 @@
 		8358F6502770D20B006779CF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		8358F6532770D9E8006779CF /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		8358F6552770DA42006779CF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		836587C4277DA00F00296AE2 /* CategoryBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBubble.swift; sourceTree = "<group>"; };
+		836587C7277DA0F400296AE2 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
+		836587CA277DA4E300296AE2 /* AlcoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoList.swift; sourceTree = "<group>"; };
 		837183F6276A854300B45ECA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		837183F8276A855900B45ECA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + SwiftUI.swift"; sourceTree = "<group>"; };
@@ -153,13 +159,14 @@
 		830817A727746A66008BA695 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				836587C9277DA4CD00296AE2 /* Alco */,
+				836587C6277DA0E200296AE2 /* DrinksCategory */,
 				83FCE77A2771F85300552B98 /* StartView.swift */,
 				83FCE7812771FFB100552B98 /* PageDots.swift */,
 				83FCE783277202D700552B98 /* XButton.swift */,
 				83FCE78F27720D3E00552B98 /* PhoneTextField.swift */,
 				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
 				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
-				838BA53A27733063002DB251 /* AlcoCard.swift */,
 				838BA53C27733190002DB251 /* XBorder.swift */,
 				830817B12774C71C008BA695 /* PullToRefresh.swift */,
 			);
@@ -312,6 +319,24 @@
 				8358F6532770D9E8006779CF /* OnboardingRouter.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		836587C6277DA0E200296AE2 /* DrinksCategory */ = {
+			isa = PBXGroup;
+			children = (
+				836587C4277DA00F00296AE2 /* CategoryBubble.swift */,
+				836587C7277DA0F400296AE2 /* CategoryList.swift */,
+			);
+			path = DrinksCategory;
+			sourceTree = "<group>";
+		};
+		836587C9277DA4CD00296AE2 /* Alco */ = {
+			isa = PBXGroup;
+			children = (
+				838BA53A27733063002DB251 /* AlcoCard.swift */,
+				836587CA277DA4E300296AE2 /* AlcoList.swift */,
+			);
+			path = Alco;
 			sourceTree = "<group>";
 		};
 		837183FA276A889A00B45ECA /* Extension */ = {
@@ -636,6 +661,8 @@
 				83FCE7A42772308B00552B98 /* HomeAPIManager.swift in Sources */,
 				838BA5482773493C002DB251 /* HomePresenter.swift in Sources */,
 				837183F9276A855900B45ECA /* SettingsView.swift in Sources */,
+				836587C5277DA00F00296AE2 /* CategoryBubble.swift in Sources */,
+				836587C8277DA0F400296AE2 /* CategoryList.swift in Sources */,
 				83FCE7A0277226AF00552B98 /* InfoView.swift in Sources */,
 				838BA53D27733190002DB251 /* XBorder.swift in Sources */,
 				830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */,
@@ -663,6 +690,7 @@
 				838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */,
 				8358F64E2770D1CE006779CF /* AppServices.swift in Sources */,
 				83FCE79927721B7200552B98 /* SMSBlocks.swift in Sources */,
+				836587CB277DA4E300296AE2 /* AlcoList.swift in Sources */,
 				838BA54627734815002DB251 /* HomeInteractor.swift in Sources */,
 				8347E0EE2769C6FB0047E977 /* SceneDelegate.swift in Sources */,
 				83FCE7A62772309700552B98 /* Persistence.swift in Sources */,

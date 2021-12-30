@@ -14,6 +14,8 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     let viewModel: LoginViewModel
     
     init(viewModel: LoginViewModel) {
@@ -25,7 +27,6 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    weak var delegate: LoginViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

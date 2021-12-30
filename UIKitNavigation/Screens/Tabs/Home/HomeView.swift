@@ -12,10 +12,10 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical) {
             PullToRefresh(coordinateSpaceName: "pullToRefresh") {
-                  // do your stuff when pulled
                 viewModel.getAlcoDrinks(isRefresh: true)
                 viewModel.getAlcoCategories(isRefresh: true)
               }
+            
             HStack {
                 Text("Categories")
                     .font(.title2)
@@ -25,51 +25,10 @@ struct HomeView: View {
             .padding([.horizontal, .bottom])
             
             VStack {
-                switch viewModel.categoriesLoadState {
-                case .idle:
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(0..<10) { item in
-                                Text("123123123123ADFasdasd")
-                                    .padding()
-                                    .background(Color.blue)
-                            }
-                            .redacted(reason: .placeholder)
-                        }
-                    }
-
-                case .loading:
-                    ZStack {
-                        ScrollView(.horizontal) {
-                            HStack {
-                                ForEach(0..<10) { item in
-                                    Text("123123123123ADFasdasd")
-                                        .padding()
-                                        .background(Color.blue)
-                                }
-                                .redacted(reason: .placeholder)
-                            }
-                        }
-
-
-                        ProgressView()
-                    }
-                case .fail:
-                    Text("Error")
-                case .success:
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(viewModel.categories.drinks, id: \.self.hashValue) { item in
-                                Text(item.strCategory)
-                                    .padding()
-                                    .background(Color.blue)
-                            }
-                            .redacted(reason: .placeholder)
-                        }
-                    }
-
-                }
+                CategoryList(loadState: $viewModel.categoriesLoadState, drinks: viewModel.categories.drinks)
             }
+            .padding(.bottom)
+
             
             HStack {
                 Text("Popular Liquor")
@@ -78,33 +37,9 @@ struct HomeView: View {
                 Spacer()
             }
             .padding([.horizontal, .bottom])
-            VStack {
-                switch viewModel.loadState {
-                case .idle:
-                    ForEach(0..<10) { item in
-                        AlcoCard(alcoTitle: "aaafaf123a", alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: "")
-                    }
-                    .redacted(reason: .placeholder)
-                case .loading:
-                    ZStack {
-                        VStack {
-                            ForEach(0..<10) { item in
-                                AlcoCard(alcoTitle: "aaafaf123a", alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: "")
-                                    .opacity(0.9)
-                            }
-                            .redacted(reason: .placeholder)
-                        }
-
-                        ProgressView()
-                    }
-                case .fail:
-                    Text("Error")
-                case .success:
-                    ForEach(viewModel.alcoData.drinks, id: \.self.idDrink) { item in
-                        AlcoCard(alcoTitle: item.strDrink, alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: item.strDrinkThumb)
-                    }
-                }
-            }
+            
+            AlcoList(loadState: $viewModel.loadState, drinks: viewModel.alcoData.drinks)
+                .padding(.bottom)
             
         }
         .coordinateSpace(name: "pullToRefresh")
