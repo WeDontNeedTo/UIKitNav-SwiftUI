@@ -29,6 +29,7 @@
 		836587C5277DA00F00296AE2 /* CategoryBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587C4277DA00F00296AE2 /* CategoryBubble.swift */; };
 		836587C8277DA0F400296AE2 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587C7277DA0F400296AE2 /* CategoryList.swift */; };
 		836587CB277DA4E300296AE2 /* AlcoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836587CA277DA4E300296AE2 /* AlcoList.swift */; };
+		836587CE277DB10E00296AE2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 836587CD277DB10E00296AE2 /* SnapKit */; };
 		837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F6276A854300B45ECA /* SettingsViewController.swift */; };
 		837183F9276A855900B45ECA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F8276A855900B45ECA /* SettingsView.swift */; };
 		837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */; };
@@ -148,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				838BA54D27734CEC002DB251 /* SDWebImageSwiftUI in Frameworks */,
+				836587CE277DB10E00296AE2 /* SnapKit in Frameworks */,
 				83FCE7802771F9B100552B98 /* GXUtilz in Frameworks */,
 				838BA53327732960002DB251 /* GXBaseAPI in Frameworks */,
 			);
@@ -583,6 +585,7 @@
 				83FCE77F2771F9B100552B98 /* GXUtilz */,
 				838BA53227732960002DB251 /* GXBaseAPI */,
 				838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */,
+				836587CD277DB10E00296AE2 /* SnapKit */,
 			);
 			productName = UIKitNavigation;
 			productReference = 8347E0E82769C6FB0047E977 /* UIKitNavigation.app */;
@@ -615,6 +618,7 @@
 			packageReferences = (
 				83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */,
 				838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8347E0E92769C6FB0047E977 /* Products */;
 			projectDirPath = "";
@@ -913,6 +917,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -932,6 +944,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		836587CD277DB10E00296AE2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		838BA53227732960002DB251 /* GXBaseAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GXBaseAPI;

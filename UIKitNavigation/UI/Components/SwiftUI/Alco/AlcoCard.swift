@@ -26,6 +26,7 @@ struct AlcoCard: View {
                 .cornerRadius(8)
             VStack(alignment: .leading, spacing: 4) {
                 Text(alcoTitle)
+                    .foregroundColor(.black)
                     .font(.system(size: 16, weight: .semibold))
                 
                 Text(alcoInfo)

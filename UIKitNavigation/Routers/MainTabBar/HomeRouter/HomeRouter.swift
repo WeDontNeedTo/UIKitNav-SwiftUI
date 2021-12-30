@@ -27,10 +27,19 @@ class HomeRouter: RouterProtocol {
 
     func start() -> UIViewController {
         let homeVC = HomeViewController(viewModel: HomeViewModel(services: self.services, presenter: HomePresenter(interacor: HomeInteracor())))
+        homeVC.delegate = self
         navController.tabBarController?.tabBar.tintColor = .green
         navController.tabBarItem.title = "Home"
         navController.tabBarItem.image = UIImage(systemName: "house")
         navController.pushViewController(homeVC, animated: true)
         return navController
+    }
+}
+
+extension HomeRouter: HomeViewControllerDelegate {
+    func didTapAlcoCard(with drink: AlcoDrink) {
+        let detailVC = DetailHomeViewController()
+        detailVC.drink = drink
+        navController.pushViewController(detailVC, animated: true)
     }
 }

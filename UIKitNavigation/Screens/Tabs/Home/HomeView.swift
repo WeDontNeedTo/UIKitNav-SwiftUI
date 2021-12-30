@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
+    var delegate: HomeViewControllerDelegate?
+    
     var body: some View {
         ScrollView(.vertical) {
             PullToRefresh(coordinateSpaceName: "pullToRefresh") {
@@ -38,7 +40,11 @@ struct HomeView: View {
             }
             .padding([.horizontal, .bottom])
             
-            AlcoList(loadState: $viewModel.loadState, drinks: viewModel.alcoData.drinks)
+            AlcoList(
+                loadState: $viewModel.loadState,
+                drinks: viewModel.alcoData.drinks,
+                delegate: delegate
+            )
                 .padding(.bottom)
             
         }

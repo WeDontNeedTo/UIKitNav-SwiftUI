@@ -10,6 +10,8 @@ import SwiftUI
 struct AlcoList: View {
     @Binding var loadState: LoadState
     var drinks: [AlcoDrink] = []
+    var delegate: HomeViewControllerDelegate?
+
     
     var body: some View {
         VStack {
@@ -23,7 +25,11 @@ struct AlcoList: View {
                 Text("Ooops... Error")
             case .success:
                 ForEach(drinks, id: \.self.idDrink) { item in
-                    AlcoCard(alcoTitle: item.strDrink, alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: item.strDrinkThumb)
+                    Button(action: {
+                        delegate?.didTapAlcoCard(with: item)
+                    }) {
+                        AlcoCard(alcoTitle: item.strDrink, alcoInfo: "375 ml, 5%", alcoPrice: "$ 2.30", alcoImage: item.strDrinkThumb)
+                    }
                 }
             }
         }

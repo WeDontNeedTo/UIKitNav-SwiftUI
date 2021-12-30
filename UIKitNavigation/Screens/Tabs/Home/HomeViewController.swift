@@ -8,7 +8,13 @@
 import UIKit
 import SwiftUI
 
+protocol HomeViewControllerDelegate: AnyObject {
+    func didTapAlcoCard(with drink: AlcoDrink)
+}
+
 class HomeViewController: UIViewController {
+    
+    weak var delegate: HomeViewControllerDelegate?
     
     let viewModel: HomeViewModel
     
@@ -24,11 +30,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        self.navigationItem.titleView = UIButton(type: .system)
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
-        addSubSwiftUIView(HomeView(viewModel: self.viewModel), to: view)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = .black
+        addSubSwiftUIView(HomeView(viewModel: self.viewModel, delegate: delegate), to: view)
     }
 }
 
