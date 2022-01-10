@@ -10,6 +10,9 @@
 		830817B22774C71C008BA695 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B12774C71C008BA695 /* PullToRefresh.swift */; };
 		830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B42774CA6A008BA695 /* AlcoCategories.swift */; };
 		830817B72774CB51008BA695 /* AlcoCategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */; };
+		832599552788DA5F00BC849C /* XUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832599542788DA5F00BC849C /* XUIButton.swift */; };
+		832599572788DD7600BC849C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832599562788DD7600BC849C /* DetailView.swift */; };
+		832DFF4C27888C7D00EBEB26 /* UIImageViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832DFF4B27888C7D00EBEB26 /* UIImageViewAlignment.swift */; };
 		8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0EB2769C6FB0047E977 /* AppDelegate.swift */; };
 		8347E0EE2769C6FB0047E977 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0ED2769C6FB0047E977 /* SceneDelegate.swift */; };
 		8347E0F02769C6FB0047E977 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E0EF2769C6FB0047E977 /* HomeViewController.swift */; };
@@ -18,7 +21,6 @@
 		8347E1012769C9250047E977 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E1002769C9250047E977 /* MainTabBar.swift */; };
 		8347E1062769C9BC0047E977 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E1052769C9BC0047E977 /* HomeView.swift */; };
 		8347E1092769CC150047E977 /* DetailHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E1082769CC150047E977 /* DetailHomeViewController.swift */; };
-		8347E10B2769CC2E0047E977 /* DetailHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347E10A2769CC2E0047E977 /* DetailHomeView.swift */; };
 		8358F6462770B79A006779CF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F6452770B79A006779CF /* OnboardingView.swift */; };
 		8358F6482770B7AB006779CF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F6472770B7AB006779CF /* OnboardingViewController.swift */; };
 		8358F64B2770D14D006779CF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358F64A2770D14D006779CF /* AppRouter.swift */; };
@@ -79,6 +81,9 @@
 		830817B12774C71C008BA695 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		830817B42774CA6A008BA695 /* AlcoCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategories.swift; sourceTree = "<group>"; };
 		830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategoryDTO.swift; sourceTree = "<group>"; };
+		832599542788DA5F00BC849C /* XUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XUIButton.swift; sourceTree = "<group>"; };
+		832599562788DD7600BC849C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		832DFF4B27888C7D00EBEB26 /* UIImageViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAlignment.swift; sourceTree = "<group>"; };
 		8347E0E82769C6FB0047E977 /* UIKitNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8347E0EB2769C6FB0047E977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8347E0ED2769C6FB0047E977 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 		8347E1002769C9250047E977 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		8347E1052769C9BC0047E977 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8347E1082769CC150047E977 /* DetailHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHomeViewController.swift; sourceTree = "<group>"; };
-		8347E10A2769CC2E0047E977 /* DetailHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHomeView.swift; sourceTree = "<group>"; };
 		8358F6452770B79A006779CF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8358F6472770B7AB006779CF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8358F64A2770D14D006779CF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -163,14 +167,14 @@
 			children = (
 				836587C9277DA4CD00296AE2 /* Alco */,
 				836587C6277DA0E200296AE2 /* DrinksCategory */,
-				83FCE77A2771F85300552B98 /* StartView.swift */,
 				83FCE7812771FFB100552B98 /* PageDots.swift */,
-				83FCE783277202D700552B98 /* XButton.swift */,
 				83FCE78F27720D3E00552B98 /* PhoneTextField.swift */,
-				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
-				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
-				838BA53C27733190002DB251 /* XBorder.swift */,
 				830817B12774C71C008BA695 /* PullToRefresh.swift */,
+				83FCE79827721B7200552B98 /* SMSBlocks.swift */,
+				83FCE79627721B4600552B98 /* SMSCodeView.swift */,
+				83FCE77A2771F85300552B98 /* StartView.swift */,
+				838BA53C27733190002DB251 /* XBorder.swift */,
+				83FCE783277202D700552B98 /* XButton.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -183,13 +187,21 @@
 			path = AlcoCategories;
 			sourceTree = "<group>";
 		};
+		832599532788DA5000BC849C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				832599542788DA5F00BC849C /* XUIButton.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		8347E0DF2769C6FB0047E977 = {
 			isa = PBXGroup;
 			children = (
-				83FCE76B2771E10200552B98 /* Packages */,
-				8347E0EA2769C6FB0047E977 /* UIKitNavigation */,
-				8347E0E92769C6FB0047E977 /* Products */,
 				838BA53127732960002DB251 /* Frameworks */,
+				83FCE76B2771E10200552B98 /* Packages */,
+				8347E0E92769C6FB0047E977 /* Products */,
+				8347E0EA2769C6FB0047E977 /* UIKitNavigation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,17 +216,17 @@
 		8347E0EA2769C6FB0047E977 /* UIKitNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				83FCE7782771F83400552B98 /* UI */,
+				8347E0F42769C6FC0047E977 /* Assets.xcassets */,
+				83FCE7662771DFC200552B98 /* Domain */,
+				8347E0F92769C6FC0047E977 /* Info.plist */,
+				8347E0F62769C6FC0047E977 /* LaunchScreen.storyboard */,
 				8347E0FF2769C9160047E977 /* Main */,
 				83FCE7612771DCD900552B98 /* Models */,
-				83FCE7662771DFC200552B98 /* Domain */,
-				83FCE7602771DC3800552B98 /* Utils */,
 				8358F6492770D142006779CF /* Routers */,
-				8358F64C2770D1C3006779CF /* Services */,
 				8347E1022769C9810047E977 /* Screens */,
-				8347E0F42769C6FC0047E977 /* Assets.xcassets */,
-				8347E0F62769C6FC0047E977 /* LaunchScreen.storyboard */,
-				8347E0F92769C6FC0047E977 /* Info.plist */,
+				8358F64C2770D1C3006779CF /* Services */,
+				83FCE7782771F83400552B98 /* UI */,
+				83FCE7602771DC3800552B98 /* Utils */,
 			);
 			path = UIKitNavigation;
 			sourceTree = "<group>";
@@ -262,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				8347E1082769CC150047E977 /* DetailHomeViewController.swift */,
-				8347E10A2769CC2E0047E977 /* DetailHomeView.swift */,
+				832599562788DD7600BC849C /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -346,6 +358,7 @@
 			children = (
 				837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */,
 				83FCE77C2771F86500552B98 /* Color.swift */,
+				832DFF4B27888C7D00EBEB26 /* UIImageViewAlignment.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -521,6 +534,7 @@
 		83FCE7792771F83C00552B98 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				832599532788DA5000BC849C /* UIKit */,
 				830817A727746A66008BA695 /* SwiftUI */,
 			);
 			path = Components;
@@ -656,6 +670,7 @@
 				83FCE77B2771F85300552B98 /* StartView.swift in Sources */,
 				83FCE79B277223CE00552B98 /* EnterCodeRouter.swift in Sources */,
 				83FCE77D2771F86500552B98 /* Color.swift in Sources */,
+				832599572788DD7600BC849C /* DetailView.swift in Sources */,
 				83FCE7932772143100552B98 /* EnterCodeViewController.swift in Sources */,
 				837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */,
 				838BA53727732CF1002DB251 /* SettingsRouter.swift in Sources */,
@@ -677,7 +692,6 @@
 				8358F6512770D20B006779CF /* LoginManager.swift in Sources */,
 				838BA53F277335FA002DB251 /* HomeViewModel.swift in Sources */,
 				8347E0EC2769C6FB0047E977 /* AppDelegate.swift in Sources */,
-				8347E10B2769CC2E0047E977 /* DetailHomeView.swift in Sources */,
 				830817B22774C71C008BA695 /* PullToRefresh.swift in Sources */,
 				83FCE7772771E32B00552B98 /* OnboardingModel.swift in Sources */,
 				838BA55527735857002DB251 /* CoreDataManagerProtocol.swift in Sources */,
@@ -690,6 +704,7 @@
 				83FCE784277202D700552B98 /* XButton.swift in Sources */,
 				83FCE78E277208D100552B98 /* LoginRouter.swift in Sources */,
 				838BA544277336D9002DB251 /* AlcoDrinks.swift in Sources */,
+				832DFF4C27888C7D00EBEB26 /* UIImageViewAlignment.swift in Sources */,
 				838BA54127733631002DB251 /* Constants.swift in Sources */,
 				838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */,
 				8358F64E2770D1CE006779CF /* AppServices.swift in Sources */,
@@ -701,6 +716,7 @@
 				838BA54A2773494E002DB251 /* BasePresenter.swift in Sources */,
 				8358F64B2770D14D006779CF /* AppRouter.swift in Sources */,
 				837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */,
+				832599552788DA5F00BC849C /* XUIButton.swift in Sources */,
 				8358F6462770B79A006779CF /* OnboardingView.swift in Sources */,
 				838BA550277357CB002DB251 /* Model.xcdatamodeld in Sources */,
 				83FCE79027720D3E00552B98 /* PhoneTextField.swift in Sources */,

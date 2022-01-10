@@ -12,8 +12,6 @@ class HomeDBManager {
     let dbQueue = DispatchQueue(label: "coredata", qos: .background)
     let dbMananger = CoreDataHelper(PersistenceController.shared.container.viewContext)
     static let shared = HomeDBManager()
-
-
 }
 // MARK: - alco drinks
 extension HomeDBManager {

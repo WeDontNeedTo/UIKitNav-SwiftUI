@@ -10,7 +10,7 @@ import SwiftUI
 struct XBorder: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 6)
-          .strokeBorder(Color.secondary, lineWidth: 1)
+            .strokeBorder(Color.secondary, lineWidth: 0.5)
     }
 }
 
