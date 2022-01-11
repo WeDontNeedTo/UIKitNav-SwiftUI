@@ -10,23 +10,18 @@ import SwiftUI
 
 class HomeRouter: RouterProtocol {
     // MARK: - Private vars
-
-    private var services: Services
     private var navController: UINavigationController = UINavigationController()
 
 
     // MARK: - Initialization
 
-    init(services: Services) {
-        self.services = services
-    }
 
     deinit {}
 
     // MARK: - Methods
 
     func start() -> UIViewController {
-        let homeVC = HomeViewController(viewModel: HomeViewModel(services: self.services, presenter: HomePresenter(interacor: HomeInteracor())))
+        let homeVC = HomeViewController(viewModel: HomeViewModel(presenter: HomePresenter() ))
         homeVC.delegate = self
         navController.tabBarController?.tabBar.tintColor = .green
         navController.tabBarItem.title = "Home"

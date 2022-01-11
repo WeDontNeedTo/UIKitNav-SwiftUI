@@ -11,16 +11,10 @@ import SwiftUI
 
 class SettingsRouter: RouterProtocol {
     // MARK: - Private vars
-
-    private var services: Services
     private var navController: UINavigationController = UINavigationController()
 
 
     // MARK: - Initialization
-
-    init(services: Services) {
-        self.services = services
-    }
 
     deinit {}
 

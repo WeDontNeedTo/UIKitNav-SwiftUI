@@ -20,34 +20,34 @@ public protocol RouterProtocol: ObservableObject {}
 
 class AppRouter: RouterProtocol {
     let window: UIWindow
-    private var services: Services
     private var anyCancellables = Set<AnyCancellable>()
+    
+    @Injected var loginManager: LoginManager
 
     @Published var screen: AppRouterScreen = .tab
     
     private lazy var onBoardingRouter: OnboardingRouter = {
-        OnboardingRouter(services: self.services)
+        OnboardingRouter()
     }()
     
     private lazy var mainTabBarRouter: MainTabBarRouter = {
-        MainTabBarRouter(services: self.services)
+        MainTabBarRouter()
     }()
     
     private lazy var loginRouter: LoginRouter = {
-        LoginRouter(services: self.services)
+        LoginRouter()
     }()
 
 
-    init(window: UIWindow, services: Services) {
+    init(window: UIWindow) {
         self.window = window
-        self.services = services
         setBindings()
     }
     
     private func setBindings() {
-        services.loginManager.state.$loggedIn.sink { [weak self] value in
+        loginManager.state.$loggedIn.sink { [weak self] value in
             guard let self = self else { return }
-            if self.services.loginManager.state.isShowedOnboarding {
+            if self.loginManager.state.isShowedOnboarding {
                 self.screen = value ? .tab : .login
             } else {
                 self.screen = .onboarding

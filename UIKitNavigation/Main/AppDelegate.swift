@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = .mainColor
         UITabBar.appearance().barTintColor = UIColor.white
+        
+        let dependencies = Dependencies {
+            Dependency { HomeInteracor() } // Register HomeInteracor
+            Dependency { AppLoginManager() }
+            Dependency { OnboardingInteractor() } // Register HomeInteracor
+
+        }
+        // Resolve only when it's needed
+        dependencies.build()
     
         return true
     }

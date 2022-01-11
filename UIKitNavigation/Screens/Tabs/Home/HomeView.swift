@@ -58,6 +58,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel(services: AppServices(), presenter: HomePresenter(interacor: HomeInteracor())))
+        HomeView(viewModel: HomeViewModel(presenter: HomePresenter()))
     }
 }

@@ -48,6 +48,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(delegate: nil, viewModel: LoginViewModel(services: AppServices()))
+        LoginView(delegate: nil, viewModel: LoginViewModel())
     }
 }

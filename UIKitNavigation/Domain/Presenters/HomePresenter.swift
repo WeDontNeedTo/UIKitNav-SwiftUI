@@ -13,11 +13,8 @@ protocol HomePresenterProtocol {
 }
 
 class HomePresenter: BasePresenter, HomePresenterProtocol {
-    private var interacor: HomeInteracor
     
-    init(interacor: HomeInteracor) {
-        self.interacor = interacor
-    }
+    @Injected private var interacor: HomeInteracor
     
     func getAlcoDrinks(isRefresh: Bool = false, handler: @escaping (Result<AlcoDrinkList, String>) -> Void ) {
         let dbData = interacor.getAlcoDrinksFromDB()

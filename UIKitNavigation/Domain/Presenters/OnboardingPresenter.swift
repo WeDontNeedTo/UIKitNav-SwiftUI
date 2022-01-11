@@ -9,12 +9,8 @@ import Foundation
 
 class OnboardingPresenter {
     
-    private var interactor: OnboardingInteractorProtocol
+    @Injected private var interactor: OnboardingInteractorProtocol
     
-    init(interactor: OnboardingInteractorProtocol) {
-        self.interactor = interactor
-    }
-        
     func getOnboardingData(handler: @escaping (Result<[OnboardingModel],Error>) -> Void) {
         interactor.getOnboardingData { result in
             switch result {

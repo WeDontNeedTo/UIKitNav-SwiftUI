@@ -10,21 +10,16 @@ import UIKit
 
 class LoginRouter: RouterProtocol {
     // MARK: - Private vars
-
-    private var services: Services
     private var navController: UINavigationController = UINavigationController()
-    private var loginVM: LoginViewModel
+    private var loginVM: LoginViewModel = LoginViewModel()
+    
+    private lazy var enterCodeRouter: EnterCodeRouter = {
+        EnterCodeRouter(navController: self.navController, loginVM: self.loginVM)
+    }()
 
     // MARK: - Initialization
 
-    init(services: Services) {
-        self.services = services
-        self.loginVM = LoginViewModel(services: self.services)
-    }
-    
-    private lazy var enterCodeRouter: EnterCodeRouter = {
-        EnterCodeRouter(services: self.services, navController: self.navController, loginVM: self.loginVM)
-    }()
+  
 
     deinit {}
 

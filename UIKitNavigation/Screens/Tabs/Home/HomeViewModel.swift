@@ -7,12 +7,11 @@
 
 import Foundation
 
-class HomeViewModel: BaseViewModel<Services>, ObservableObject {
+class HomeViewModel: ObservableObject {
     private var presenter: HomePresenter
     
-    init(services: Services, presenter: HomePresenter) {
+    init(presenter: HomePresenter) {
         self.presenter = presenter
-        super.init(services: services)
     }
     
     @Published var alcoData: AlcoDrinkList = AlcoDrinkList()

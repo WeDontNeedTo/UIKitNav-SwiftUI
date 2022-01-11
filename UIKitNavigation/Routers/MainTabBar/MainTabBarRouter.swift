@@ -11,20 +11,14 @@ import SwiftUI
 class MainTabBarRouter: RouterProtocol {
     // MARK: - Private vars
 
-    private var services: Services
-
     // MARK: - Initialization
 
-    init(services: Services) {
-        self.services = services
-    }
-    
     private lazy var homeRouter: HomeRouter = {
-        HomeRouter(services: self.services)
+        HomeRouter()
     }()
     
     private lazy var settingsRouter: SettingsRouter = {
-        SettingsRouter(services: self.services)
+        SettingsRouter()
     }()
 
     deinit {}

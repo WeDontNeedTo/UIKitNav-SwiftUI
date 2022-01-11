@@ -11,14 +11,12 @@ import UIKit
 class EnterCodeRouter: RouterProtocol {
     // MARK: - Private vars
 
-    private var services: Services
     private var navController: UINavigationController
     private var loginVM: LoginViewModel
 
     // MARK: - Initialization
 
-    init(services: Services,  navController: UINavigationController, loginVM: LoginViewModel) {
-        self.services = services
+    init(navController: UINavigationController, loginVM: LoginViewModel) {
         self.navController = navController
         self.loginVM = loginVM
     }

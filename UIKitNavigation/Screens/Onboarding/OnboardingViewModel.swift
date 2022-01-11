@@ -14,21 +14,13 @@ enum LoadState {
     case success
 }
 
-open class BaseViewModel<S> {
-    public var services: S
-
-    public init(services: S) {
-        self.services = services
-    }
-}
-
-class OnboardingViewModel: BaseViewModel<Services>, ObservableObject {
+class OnboardingViewModel: ObservableObject {
     
     private var presenter: OnboardingPresenter
+    @Injected var loginManager: LoginManager
     
-    init(services: Services, presenter: OnboardingPresenter) {
+    init(presenter: OnboardingPresenter) {
         self.presenter = presenter
-        super.init(services: services)
     }
     
     @Published var selection: Int = 0 
@@ -38,7 +30,7 @@ class OnboardingViewModel: BaseViewModel<Services>, ObservableObject {
     deinit {}
 
     func goToLogIn() {
-        services.loginManager.onboardingShowed()
+        loginManager.onboardingShowed()
     }
 
     func getOnboardingData() {

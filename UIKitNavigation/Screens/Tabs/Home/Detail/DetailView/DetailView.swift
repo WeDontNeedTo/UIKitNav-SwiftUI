@@ -10,6 +10,20 @@ import UIKit
 import SnapKit
 
 class DetailView: UIView {
+    // MARK: - proporties
+        
+    var drink: AlcoDrink? {
+        didSet {
+            drinkImage.sd_setImage(with: URL(string: drink?.strDrinkThumb ?? "")) { image, error, cacheType, _ in
+                self.setImageView(with: image)
+            }
+            drinkTitle.text = drink?.strDrink
+        }
+    }
+    
+    // MARK: - init
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         createSubViews()
@@ -20,16 +34,6 @@ class DetailView: UIView {
         createSubViews()
     }
     
-    var qty: Int = 1
-    
-    var drink: AlcoDrink? {
-        didSet {
-            drinkImage.sd_setImage(with: URL(string: drink?.strDrinkThumb ?? "")) { image, error, cacheType, _ in
-                self.setImageView(with: image)
-            }
-            drinkTitle.text = drink?.strDrink
-        }
-    }
     
     lazy var drinkImage: UIImageView = {
         var imageView = UIImageView()
@@ -127,44 +131,47 @@ class DetailView: UIView {
         return stack
     }()
     
-    lazy var hStackQty: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.distribution = .equalSpacing
-        stack.spacing = 4
-        return stack
-    }()
-
+//    lazy var hStackQty: UIStackView = {
+//        let stack = UIStackView()
+//        stack.axis = .horizontal
+//        stack.distribution = .equalSpacing
+//        stack.spacing = 4
+//        return stack
+//    }()
+//
+//
+//    lazy var removeQtyButton: UIButton = {
+//        let button = UIButton(title: "-")
+//        button.addAction(UIAction(handler: { action in
+//
+//        }), for: .touchUpInside)
+//        return button
+//    }()
+//
+//    lazy var addQtyButton: UIButton = {
+//        let button = UIButton(title: "+")
+//        button.addAction(UIAction(handler: { action in
+//            self.qty += 1
+//            self.qtyCounter.text = self.qty.description
+//        }), for: .touchUpInside)
+//
+//        return button
+//    }()
     
-    lazy var removeQtyButton: UIButton = {
-        let button = UIButton(title: "-")
-        button.addAction(UIAction(handler: { action in
-            guard self.qty > 1 else { return }
-            self.qty -= 1
-            self.qtyCounter.text = self.qty.description
-        }), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var addQtyButton: UIButton = {
-        let button = UIButton(title: "+")
-        button.addAction(UIAction(handler: { action in
-            self.qty += 1
-            self.qtyCounter.text = self.qty.description
-        }), for: .touchUpInside)
-        
-        return button
-    }()
+    var quantitatyView = QuantitatyView(qty: 1)
     
     
 }
 
 extension DetailView {
-
+    
+    // MARK: - set image view
     private func setImageView(with image: UIImage?) {
         drinkImage.contentMode = .scaleAspectFill
         drinkImage.clipsToBounds = true
     }
+    
+    // MARK: - setup UI
     
     func createSubViews() {
         addSubview(drinkImage)
@@ -174,24 +181,17 @@ extension DetailView {
         addSubview(drinkInfo)
         addSubview(addToCartButton)
         
-        
-        
         addSubview(hStack)
         hStack.addArrangedSubview(qtyTitle)
         hStack.addArrangedSubview(priceTitle)
         
-        addSubview(hStackQty)
-        
-        hStackQty.addArrangedSubview(removeQtyButton)
-        hStackQty.addArrangedSubview(qtyCounter)
-        hStackQty.addArrangedSubview(addQtyButton)
-
-
+        addSubview(quantitatyView)
+    
         addSubview(hStackCounter)
-        hStackCounter.addArrangedSubview(hStackQty)
+        hStackCounter.addArrangedSubview(quantitatyView)
         hStackCounter.addArrangedSubview(priceCounter)
         
-
+        
         drinkImage.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.width.equalTo(self)
@@ -218,7 +218,13 @@ extension DetailView {
             make.right.equalTo(self).inset(35)
         }
         
-        hStackQty.snp.makeConstraints { make in
+        quantitatyView.snp.makeConstraints { make in
+            make.top.equalTo(hStack.snp.bottom).offset(8)
+            make.left.equalTo(self).inset(25)
+            make.width.equalTo(self).multipliedBy(0.3)
+        }
+        
+        quantitatyView.hStackQty.snp.makeConstraints { make in
             make.top.equalTo(hStack.snp.bottom).offset(8)
             make.left.equalTo(self).inset(25)
             make.width.equalTo(self).multipliedBy(0.3)
@@ -245,8 +251,6 @@ extension DetailView {
             make.left.right.equalTo(self).inset(25)
             make.height.equalTo(self.snp.width).multipliedBy(0.16)
         }
-        
-
     }
 }
 
