@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+ // MARK: - register DI
 extension AppDelegate {
     private func registerOnboarding() -> [Dependency] {
         DependencyBuilder.buildBlock(
@@ -59,7 +60,6 @@ extension AppDelegate {
             Dependency { AppLoginManager() }
         )
     }
-    
     
     private func registerHome() -> [Dependency] {
         DependencyBuilder.buildBlock(

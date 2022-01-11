@@ -27,13 +27,11 @@ struct Dependency {
     static func buildBlock(_ dependency: Dependency) -> Dependency { dependency }
     static func buildBlock(_ dependencies: Dependency...) -> [Dependency] { dependencies }
     static func buildBlock(_ dependencies: [Dependency]...) -> [Dependency] { dependencies.reduce([], { $0 + $1 }) }
-
 }
 
 class Dependencies {
-
+    
     static private(set) var shared = Dependencies() // 1
-
     fileprivate var dependencies = [Dependency]() // 2
     
     convenience init(@DependencyBuilder _ dependencies: () -> [Dependency]) {
@@ -45,7 +43,6 @@ class Dependencies {
         self.init()
         register(dependency())
     }
-
 
     func register(_ dependency: Dependency) {
         // Avoid duplicates

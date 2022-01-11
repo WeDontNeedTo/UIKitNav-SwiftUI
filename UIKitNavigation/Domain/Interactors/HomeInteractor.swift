@@ -66,7 +66,6 @@ extension HomeInteracor.UseCases: DBRequest {
             return "AlcoCategoryMO"
         case .getAlcoDrinks:
             return "AlcoDrinkMO"
-
         }
     }
     
