@@ -7,7 +7,11 @@
 
 import Foundation
 
-class OnboardingPresenter {
+protocol OnboardingPresenterProtocol {
+    func getOnboardingData(handler: @escaping (Result<[OnboardingModel],Error>) -> Void)
+}
+
+class OnboardingPresenter: OnboardingPresenterProtocol {
     
     @Injected private var interactor: OnboardingInteractorProtocol
     

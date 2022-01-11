@@ -13,13 +13,11 @@ protocol EnterCodeViewControllerDelegate: AnyObject {
 }
 
 class EnterCodeViewController: UIViewController {
-    
+    @Injected var loginVM: LoginViewModel
     weak var delegate: EnterCodeViewControllerDelegate?
     
-    let viewModel: LoginViewModel
     
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +27,7 @@ class EnterCodeViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        addSubSwiftUIView(EnterCodeView(delegate: self.delegate, viewModel: viewModel), to: view)
+        addSubSwiftUIView(EnterCodeView(delegate: self.delegate, viewModel: loginVM), to: view)
     }
 }
 

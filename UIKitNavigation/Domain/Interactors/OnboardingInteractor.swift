@@ -14,9 +14,16 @@ protocol OnboardingInteractorProtocol {
 class OnboardingInteractor: OnboardingInteractorProtocol {
     func getOnboardingData(handler: @escaping (Result<[OnboardingModel],Error>) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            handler(.success(OnboardingModel.realData))
+        }
+    }
+}
+
+
+class StubOnboardingInteractor: OnboardingInteractorProtocol {
+    func getOnboardingData(handler: @escaping (Result<[OnboardingModel],Error>) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             handler(.success(OnboardingModel.mockData))
         }
     }
-    
-    
 }

@@ -12,13 +12,12 @@ class EnterCodeRouter: RouterProtocol {
     // MARK: - Private vars
 
     private var navController: UINavigationController
-    private var loginVM: LoginViewModel
+    @Injected private var loginVM: LoginViewModel
 
     // MARK: - Initialization
 
-    init(navController: UINavigationController, loginVM: LoginViewModel) {
+    init(navController: UINavigationController) {
         self.navController = navController
-        self.loginVM = loginVM
     }
 
     deinit {}
@@ -26,7 +25,7 @@ class EnterCodeRouter: RouterProtocol {
     // MARK: - Methods
 
     func start() {
-        let enterCodeVC = EnterCodeViewController(viewModel: self.loginVM)
+        let enterCodeVC = EnterCodeViewController()
         enterCodeVC.delegate = self
         navController.pushViewController(enterCodeVC, animated: true)
     }
@@ -34,6 +33,6 @@ class EnterCodeRouter: RouterProtocol {
 
 extension EnterCodeRouter: EnterCodeViewControllerDelegate {
     func didEnterCode() {
-        navController.pushViewController(InfoViewController(viewModel: self.loginVM), animated: true)
+        navController.pushViewController(InfoViewController(), animated: true)
     }
 }

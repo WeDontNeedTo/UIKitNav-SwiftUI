@@ -23,17 +23,19 @@ struct Dependency {
     }
 }
 
+@resultBuilder struct DependencyBuilder {
+    static func buildBlock(_ dependency: Dependency) -> Dependency { dependency }
+    static func buildBlock(_ dependencies: Dependency...) -> [Dependency] { dependencies }
+    static func buildBlock(_ dependencies: [Dependency]...) -> [Dependency] { dependencies.reduce([], { $0 + $1 }) }
+
+}
+
 class Dependencies {
 
     static private(set) var shared = Dependencies() // 1
 
     fileprivate var dependencies = [Dependency]() // 2
     
-    @resultBuilder struct DependencyBuilder {
-        static func buildBlock(_ dependency: Dependency) -> Dependency { dependency }
-        static func buildBlock(_ dependencies: Dependency...) -> [Dependency] { dependencies }
-    }
-
     convenience init(@DependencyBuilder _ dependencies: () -> [Dependency]) {
         self.init()
         dependencies().forEach { register($0) }

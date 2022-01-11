@@ -21,9 +21,7 @@ public protocol RouterProtocol: ObservableObject {}
 class AppRouter: RouterProtocol {
     let window: UIWindow
     private var anyCancellables = Set<AnyCancellable>()
-    
     @Injected var loginManager: LoginManager
-
     @Published var screen: AppRouterScreen = .tab
     
     private lazy var onBoardingRouter: OnboardingRouter = {

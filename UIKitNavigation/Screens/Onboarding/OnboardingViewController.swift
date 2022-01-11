@@ -10,10 +10,9 @@ import UIKit
 import SwiftUI
 
 class OnboardingViewController: UIViewController {
-    let viewModel: OnboardingViewModel
+    @Injected var viewModel: OnboardingViewModel
     
-    init(viewModel: OnboardingViewModel) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     

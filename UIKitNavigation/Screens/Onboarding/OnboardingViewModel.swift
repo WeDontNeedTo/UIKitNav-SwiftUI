@@ -16,12 +16,9 @@ enum LoadState {
 
 class OnboardingViewModel: ObservableObject {
     
-    private var presenter: OnboardingPresenter
-    @Injected var loginManager: LoginManager
+    @Injected private var presenter: OnboardingPresenterProtocol
+    @Injected private var loginManager: LoginManager
     
-    init(presenter: OnboardingPresenter) {
-        self.presenter = presenter
-    }
     
     @Published var selection: Int = 0 
     @Published var onboardingData: [OnboardingModel] = []

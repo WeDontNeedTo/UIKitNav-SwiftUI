@@ -10,18 +10,17 @@ import SwiftUI
 
 class OnboardingRouter: RouterProtocol {
     // MARK: - Private vars
-
+    @Injected private var onboardingViewController: OnboardingViewController
 
     // MARK: - Initialization
-
-
+    
+    init() {}
 
     deinit {}
 
     // MARK: - Methods
 
     func start() -> UIViewController {
-        let viewModel = OnboardingViewModel(presenter: OnboardingPresenter())
-        return OnboardingViewController(viewModel: viewModel)
+        return onboardingViewController
     }
 }

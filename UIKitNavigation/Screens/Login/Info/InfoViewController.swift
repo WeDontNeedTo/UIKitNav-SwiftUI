@@ -10,10 +10,9 @@ import UIKit
 
 class InfoViewController: UIViewController {
         
-    let viewModel: LoginViewModel
-    
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+    @Injected var loginVM: LoginViewModel
+
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -23,7 +22,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        addSubSwiftUIView(InfoView(viewModel: viewModel), to: view)
+        addSubSwiftUIView(InfoView(viewModel: loginVM), to: view)
     }
 }
 

@@ -11,22 +11,20 @@ import UIKit
 class LoginRouter: RouterProtocol {
     // MARK: - Private vars
     private var navController: UINavigationController = UINavigationController()
-    private var loginVM: LoginViewModel = LoginViewModel()
-    
+    @Injected private var loginVM: LoginViewModel
+
+
     private lazy var enterCodeRouter: EnterCodeRouter = {
-        EnterCodeRouter(navController: self.navController, loginVM: self.loginVM)
+        EnterCodeRouter(navController: self.navController)
     }()
 
     // MARK: - Initialization
-
-  
-
     deinit {}
 
     // MARK: - Methods
 
     func start() -> UIViewController {
-        let loginVC = LoginViewController(viewModel: loginVM)
+        let loginVC = LoginViewController()
         loginVC.delegate = self
         navController.pushViewController(loginVC, animated: true)
         return navController

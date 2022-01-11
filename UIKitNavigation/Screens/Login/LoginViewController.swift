@@ -14,12 +14,10 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
     
+    @Injected private var loginVM: LoginViewModel
     weak var delegate: LoginViewControllerDelegate?
-    
-    let viewModel: LoginViewModel
-    
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+        
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,6 +30,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = .black
-        addSubSwiftUIView(LoginView(delegate: self.delegate, viewModel: self.viewModel), to: view)
+        addSubSwiftUIView(LoginView(delegate: self.delegate, viewModel: self.loginVM), to: view)
     }
 }
