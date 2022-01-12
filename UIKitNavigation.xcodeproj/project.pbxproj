@@ -53,6 +53,7 @@
 		838BA55527735857002DB251 /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA55427735857002DB251 /* CoreDataManagerProtocol.swift */; };
 		838BA55727735869002DB251 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA55627735869002DB251 /* CoreDataManager.swift */; };
 		838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA559277375A2002DB251 /* HomeDBManager.swift */; };
+		83BEC1E7278ECCBF0054E331 /* GXBaseAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 83BEC1E6278ECCBF0054E331 /* GXBaseAPI */; };
 		83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */; };
 		83FCE7722771E1B700552B98 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */; };
 		83FCE7742771E1C200552B98 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */; };
@@ -103,7 +104,6 @@
 		8358F6502770D20B006779CF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		8358F6532770D9E8006779CF /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		8358F6552770DA42006779CF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		835A8C2A278CD85B00022EC2 /* GXBaseAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GXBaseAPI; path = ../GXBaseAPI; sourceTree = "<group>"; };
 		836587C4277DA00F00296AE2 /* CategoryBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBubble.swift; sourceTree = "<group>"; };
 		836587C7277DA0F400296AE2 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		836587CA277DA4E300296AE2 /* AlcoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoList.swift; sourceTree = "<group>"; };
@@ -155,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				838BA54D27734CEC002DB251 /* SDWebImageSwiftUI in Frameworks */,
+				83BEC1E7278ECCBF0054E331 /* GXBaseAPI in Frameworks */,
 				835A8C2C278CD86400022EC2 /* GXBaseAPI in Frameworks */,
 				836587CE277DB10E00296AE2 /* SnapKit in Frameworks */,
 				83FCE7802771F9B100552B98 /* GXUtilz in Frameworks */,
@@ -226,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				838BA53127732960002DB251 /* Frameworks */,
-				83FCE76B2771E10200552B98 /* Packages */,
 				8347E0E92769C6FB0047E977 /* Products */,
 				8347E0EA2769C6FB0047E977 /* UIKitNavigation */,
 			);
@@ -517,14 +517,6 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		83FCE76B2771E10200552B98 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				835A8C2A278CD85B00022EC2 /* GXBaseAPI */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		83FCE76F2771E14F00552B98 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +619,7 @@
 				838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */,
 				836587CD277DB10E00296AE2 /* SnapKit */,
 				835A8C2B278CD86400022EC2 /* GXBaseAPI */,
+				83BEC1E6278ECCBF0054E331 /* GXBaseAPI */,
 			);
 			productName = UIKitNavigation;
 			productReference = 8347E0E82769C6FB0047E977 /* UIKitNavigation.app */;
@@ -660,6 +653,7 @@
 				83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */,
 				838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				83BEC1E5278ECCBF0054E331 /* XCRemoteSwiftPackageReference "GXBaseAPI" */,
 			);
 			productRefGroup = 8347E0E92769C6FB0047E977 /* Products */;
 			projectDirPath = "";
@@ -977,6 +971,14 @@
 				kind = branch;
 			};
 		};
+		83BEC1E5278ECCBF0054E331 /* XCRemoteSwiftPackageReference "GXBaseAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WeDontNeedTo/GXBaseAPI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		83FCE77E2771F9B100552B98 /* XCRemoteSwiftPackageReference "garpix_utils" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GARPIX-iOS/garpix_utils";
@@ -1001,6 +1003,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		83BEC1E6278ECCBF0054E331 /* GXBaseAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BEC1E5278ECCBF0054E331 /* XCRemoteSwiftPackageReference "GXBaseAPI" */;
+			productName = GXBaseAPI;
 		};
 		83FCE77F2771F9B100552B98 /* GXUtilz */ = {
 			isa = XCSwiftPackageProductDependency;

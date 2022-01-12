@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "GXBaseAPI",
+        "repositoryURL": "https://github.com/WeDontNeedTo/GXBaseAPI",
+        "state": {
+          "branch": "master",
+          "revision": "295faca672f1422cff61994244434c00820b9e97",
+          "version": null
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
