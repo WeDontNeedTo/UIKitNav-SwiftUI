@@ -14,12 +14,11 @@ protocol HomeViewControllerDelegate: AnyObject {
 
 class HomeViewController: UIViewController {
     
+    @Injected var viewModel: HomeViewModel
+
     weak var delegate: HomeViewControllerDelegate?
     
-    let viewModel: HomeViewModel
-    
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     

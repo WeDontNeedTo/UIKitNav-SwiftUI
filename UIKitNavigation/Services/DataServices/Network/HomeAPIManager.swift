@@ -9,11 +9,14 @@ import Foundation
 import GXBaseAPI
 import Combine
 
-class HomeAPIManager: BaseAPIManagerProtocol {
+protocol HomeAPIManagerProtocol {
+    func getAlcoDrinks(endpoint: APICall) -> AnyPublisher<AlcoDrinkList, Error>
+    
+    func getCategories(endpoint: APICall) -> AnyPublisher<AlcoCategories, Error>
+}
+
+class HomeAPIManager: HomeAPIManagerProtocol, BaseAPIManagerProtocol {
     var baseURL: String = Constants.cocktailBaseURL
-    
-    static let shared = HomeAPIManager()
-    
     
     func getAlcoDrinks(endpoint: APICall) -> AnyPublisher<AlcoDrinkList, Error> {
         return fetch(endpoint: endpoint)

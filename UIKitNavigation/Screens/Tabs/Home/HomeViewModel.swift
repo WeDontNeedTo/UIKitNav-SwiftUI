@@ -8,12 +8,8 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    private var presenter: HomePresenter
-    
-    init(presenter: HomePresenter) {
-        self.presenter = presenter
-    }
-    
+    @Injected private var presenter: HomePresenter
+        
     @Published var alcoData: AlcoDrinkList = AlcoDrinkList()
     @Published var categories: AlcoCategories = AlcoCategories()
 

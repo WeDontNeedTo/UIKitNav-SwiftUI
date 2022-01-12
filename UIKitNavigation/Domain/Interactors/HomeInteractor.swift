@@ -12,6 +12,9 @@ import CoreData
 
 
 class HomeInteracor {
+    
+    @Injected var homeAPIManager: HomeAPIManagerProtocol
+    @Injected var homeDBManager: HomeDBManagerProtocol
 
     enum UseCases {
         case getAlcoDrinks
@@ -21,39 +24,39 @@ class HomeInteracor {
     // MARK: getAlcoDrinks
     
     func getAlcoDrinksFromWeb() -> AnyPublisher<AlcoDrinkList, Error> {
-        HomeAPIManager.shared.getAlcoDrinks(endpoint: UseCases.getAlcoDrinks)
+        homeAPIManager.getAlcoDrinks(endpoint: UseCases.getAlcoDrinks)
     }
     
     func getAlcoDrinksFromDB() -> [AlcoDrink] {
-        HomeDBManager.shared.getAlcoDrinksFromDB(with: UseCases.getAlcoDrinks.entityName)
+        homeDBManager.getAlcoDrinksFromDB(with: UseCases.getAlcoDrinks.entityName)
     }
     
     func updateDb(with drinks: [AlcoDrink]) {
-        HomeDBManager.shared.updateAlcoDrinks(with: drinks)
+        homeDBManager.updateAlcoDrinks(with: drinks)
     }
     
     func deleteOldDrinks() {
-        HomeDBManager.shared.deleteOldDrinks(with: UseCases.getAlcoDrinks.entityName)
+        homeDBManager.deleteOldDrinks(with: UseCases.getAlcoDrinks.entityName)
     }
     
     
     // MARK: getAlcoCategories
 
     func getAlcoCategoriesFromWeb() -> AnyPublisher<AlcoCategories, Error> {
-        HomeAPIManager.shared.getCategories(endpoint: UseCases.getAlcoCategories)
+        homeAPIManager.getCategories(endpoint: UseCases.getAlcoCategories)
     }
     
     func getAlcoCategoriesFromDB() -> [AlcoCategory] {
-        HomeDBManager.shared.getAlcoCategoriesFromDB(with: UseCases.getAlcoCategories.entityName)
+        homeDBManager.getAlcoCategoriesFromDB(with: UseCases.getAlcoCategories.entityName)
     }
     
     func updateCategoriesDB(with categories: [AlcoCategory]) {
-        HomeDBManager.shared.updateAlcoCategories(with: categories)
+        homeDBManager.updateAlcoCategories(with: categories)
     }
     
 
     func deleteOldCategories() {
-        HomeDBManager.shared.deleteOldCategories(with: UseCases.getAlcoCategories.entityName)
+        homeDBManager.deleteOldCategories(with: UseCases.getAlcoCategories.entityName)
     }
 }
 

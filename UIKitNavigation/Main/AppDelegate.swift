@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.white
         
         let dependencies = Dependencies {
+            registerDataServices()
             registerOnboarding()
             registerLoginServices()
             registerHome()
@@ -46,6 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
  // MARK: - register DI
 extension AppDelegate {
+    
+    private func registerDataServices() -> [Dependency] {
+        DependencyBuilder.buildBlock(
+            Dependency { HomeAPIManager() },
+            Dependency { HomeDBManager() }
+        )
+    }
+    
     private func registerOnboarding() -> [Dependency] {
         DependencyBuilder.buildBlock(
             Dependency { OnboardingInteractor() },
@@ -63,7 +72,10 @@ extension AppDelegate {
     
     private func registerHome() -> [Dependency] {
         DependencyBuilder.buildBlock(
-            Dependency { HomeInteracor() }
+            Dependency { HomeInteracor() },
+            Dependency { HomePresenter() },
+            Dependency { HomeViewModel() },
+            Dependency { HomeViewController() }
         )
     }
     

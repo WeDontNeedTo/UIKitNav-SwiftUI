@@ -50,14 +50,16 @@ struct HomeView: View {
         }
         .coordinateSpace(name: "pullToRefresh")
         .onAppear {
-            viewModel.getAlcoDrinks()
-            viewModel.getAlcoCategories()
+            if viewModel.alcoData.drinks.isEmpty || viewModel.categories.drinks.isEmpty {
+                viewModel.getAlcoDrinks()
+                viewModel.getAlcoCategories()
+            }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel(presenter: HomePresenter()))
+        HomeView(viewModel: HomeViewModel())
     }
 }

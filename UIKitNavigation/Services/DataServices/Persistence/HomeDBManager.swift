@@ -8,10 +8,24 @@
 import Foundation
 import CoreData
 
-class HomeDBManager {
+
+protocol HomeDBManagerProtocol {
+    func getAlcoDrinksFromDB(with entityName: String) -> [AlcoDrink]
+    
+    func updateAlcoDrinks(with data: [AlcoDrink])
+    
+    func deleteOldDrinks(with entityName: String)
+    
+    func getAlcoCategoriesFromDB(with entityName: String) -> [AlcoCategory]
+    
+    func updateAlcoCategories(with data: [AlcoCategory])
+    
+    func deleteOldCategories(with entityName: String)
+}
+
+class HomeDBManager: HomeDBManagerProtocol {
     let dbQueue = DispatchQueue(label: "coredata", qos: .background)
     let dbMananger = CoreDataHelper(PersistenceController.shared.container.viewContext)
-    static let shared = HomeDBManager()
 }
 // MARK: - alco drinks
 extension HomeDBManager {
