@@ -9,18 +9,8 @@ import Foundation
 import SwiftUI
 
 class OnboardingRouter: RouterProtocol {
-    // MARK: - Private vars
-    @Injected private var onboardingViewController: OnboardingViewController
-
-    // MARK: - Initialization
-    
-    init() {}
-
-    deinit {}
-
-    // MARK: - Methods
-
     func start() -> UIViewController {
+        let onboardingViewController = OnboardingViewController()
         return onboardingViewController
     }
 }

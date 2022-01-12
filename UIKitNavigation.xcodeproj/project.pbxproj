@@ -168,16 +168,8 @@
 		8305D47F278C6287003D0436 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				8305D480278C6293003D0436 /* DetailView */,
-				832599562788DD7600BC849C /* DetailView.swift */,
-			);
-			path = DetailView;
-			sourceTree = "<group>";
-		};
-		8305D480278C6293003D0436 /* DetailView */ = {
-			isa = PBXGroup;
-			children = (
 				8305D481278C7379003D0436 /* QuantitatyView.swift */,
+				832599562788DD7600BC849C /* DetailView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";

@@ -9,6 +9,17 @@ import Foundation
 import UIKit
 import SnapKit
 
+public extension Formatter {
+    static let ruCurrencyWithFractionDigits: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.usesGroupingSeparator = true
+        formatter.maximumFractionDigits = 2
+        formatter.locale = .init(identifier: "ru_RU")
+        formatter.numberStyle = .currency
+        return formatter
+    }()
+}
+
 class DetailView: UIView {
     // MARK: - proporties
         
@@ -120,7 +131,7 @@ class DetailView: UIView {
         let label = UILabel()
         label.textColor = .black
         label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.text = "3.50 $"
+        label.text = Formatter.ruCurrencyWithFractionDigits.string(for: Double.random(in: 100.50..<600.30))
         return label
     }()
     
@@ -130,37 +141,8 @@ class DetailView: UIView {
         stack.distribution = .fillEqually
         return stack
     }()
-    
-//    lazy var hStackQty: UIStackView = {
-//        let stack = UIStackView()
-//        stack.axis = .horizontal
-//        stack.distribution = .equalSpacing
-//        stack.spacing = 4
-//        return stack
-//    }()
-//
-//
-//    lazy var removeQtyButton: UIButton = {
-//        let button = UIButton(title: "-")
-//        button.addAction(UIAction(handler: { action in
-//
-//        }), for: .touchUpInside)
-//        return button
-//    }()
-//
-//    lazy var addQtyButton: UIButton = {
-//        let button = UIButton(title: "+")
-//        button.addAction(UIAction(handler: { action in
-//            self.qty += 1
-//            self.qtyCounter.text = self.qty.description
-//        }), for: .touchUpInside)
-//
-//        return button
-//    }()
-    
+
     var quantitatyView = QuantitatyView(qty: 1)
-    
-    
 }
 
 extension DetailView {

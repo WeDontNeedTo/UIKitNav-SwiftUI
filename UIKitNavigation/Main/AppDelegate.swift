@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             registerOnboarding()
             registerLoginServices()
             registerHome()
-            registerLogin()
         }
         // Resolve only when it's needed
         dependencies.build()
@@ -59,14 +58,14 @@ extension AppDelegate {
         DependencyBuilder.buildBlock(
             Dependency { OnboardingInteractor() },
             Dependency { OnboardingPresenter() },
-            Dependency { OnboardingViewModel() },
-            Dependency { OnboardingViewController() }
+            Dependency { OnboardingViewModel() }
         )
     }
     
     private func registerLoginServices() -> [Dependency] {
         DependencyBuilder.buildBlock(
-            Dependency { AppLoginManager() }
+            Dependency { AppLoginManager() },
+            Dependency { LoginViewModel() }
         )
     }
     
@@ -74,14 +73,7 @@ extension AppDelegate {
         DependencyBuilder.buildBlock(
             Dependency { HomeInteracor() },
             Dependency { HomePresenter() },
-            Dependency { HomeViewModel() },
-            Dependency { HomeViewController() }
-        )
-    }
-    
-    private func registerLogin() -> [Dependency] {
-        DependencyBuilder.buildBlock(
-            Dependency { LoginViewModel() }
+            Dependency { HomeViewModel() }
         )
     }
 }

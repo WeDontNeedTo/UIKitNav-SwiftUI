@@ -10,8 +10,8 @@ import UIKit
 
 class LoginRouter: RouterProtocol {
     // MARK: - Private vars
-    private var navController: UINavigationController = UINavigationController()
     @Injected private var loginVM: LoginViewModel
+    private var navController: UINavigationController = UINavigationController()
 
 
     private lazy var enterCodeRouter: EnterCodeRouter = {

@@ -10,7 +10,6 @@ import SwiftUI
 
 class HomeRouter: RouterProtocol {
     // MARK: - Private vars
-    @Injected private var homeVC: HomeViewController
     private var navController: UINavigationController = UINavigationController()
 
     // MARK: - Initialization
@@ -19,6 +18,7 @@ class HomeRouter: RouterProtocol {
     // MARK: - Methods
 
     func start() -> UIViewController {
+        let homeVC = HomeViewController()
         homeVC.delegate = self
         navController.tabBarController?.tabBar.tintColor = .green
         navController.tabBarItem.title = "Home"
