@@ -54,6 +54,8 @@
 		838BA55727735869002DB251 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA55627735869002DB251 /* CoreDataManager.swift */; };
 		838BA55A277375A2002DB251 /* HomeDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA559277375A2002DB251 /* HomeDBManager.swift */; };
 		83BEC1E7278ECCBF0054E331 /* GXBaseAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 83BEC1E6278ECCBF0054E331 /* GXBaseAPI */; };
+		83D8FB90279051FB003CBF5F /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8FB8F279051FB003CBF5F /* SettingsRow.swift */; };
+		83D8FB922790734D003CBF5F /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8FB912790734D003CBF5F /* SettingsHeader.swift */; };
 		83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */; };
 		83FCE7722771E1B700552B98 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */; };
 		83FCE7742771E1C200552B98 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */; };
@@ -125,6 +127,8 @@
 		838BA55427735857002DB251 /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
 		838BA55627735869002DB251 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		838BA559277375A2002DB251 /* HomeDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDBManager.swift; sourceTree = "<group>"; };
+		83D8FB8F279051FB003CBF5F /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		83D8FB912790734D003CBF5F /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		83FCE75E2771D97D00552B98 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
 		83FCE7712771E1B700552B98 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		83FCE7732771E1C200552B98 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				832599542788DA5F00BC849C /* XUIButton.swift */,
+				83D8FB8F279051FB003CBF5F /* SettingsRow.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			children = (
 				837183F6276A854300B45ECA /* SettingsViewController.swift */,
 				837183F8276A855900B45ECA /* SettingsView.swift */,
+				83D8FB912790734D003CBF5F /* SettingsHeader.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -698,6 +704,7 @@
 				83FCE7A0277226AF00552B98 /* InfoView.swift in Sources */,
 				838BA53D27733190002DB251 /* XBorder.swift in Sources */,
 				830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */,
+				83D8FB922790734D003CBF5F /* SettingsHeader.swift in Sources */,
 				83FCE7822771FFB100552B98 /* PageDots.swift in Sources */,
 				83FCE75F2771D97D00552B98 /* MainTabBarRouter.swift in Sources */,
 				83FCE7872772083400552B98 /* LoginView.swift in Sources */,
@@ -726,6 +733,7 @@
 				838BA54627734815002DB251 /* HomeInteractor.swift in Sources */,
 				8347E0EE2769C6FB0047E977 /* SceneDelegate.swift in Sources */,
 				83FCE7A62772309700552B98 /* Persistence.swift in Sources */,
+				83D8FB90279051FB003CBF5F /* SettingsRow.swift in Sources */,
 				838BA54A2773494E002DB251 /* BasePresenter.swift in Sources */,
 				8358F64B2770D14D006779CF /* AppRouter.swift in Sources */,
 				837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */,
