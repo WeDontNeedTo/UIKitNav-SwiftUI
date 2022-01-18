@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GXInject
 
 protocol LoginViewControllerDelegate: AnyObject {
   func didEnterPhoneNumber()

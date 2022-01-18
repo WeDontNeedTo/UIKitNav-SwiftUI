@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GXInject
 
 class HomeViewModel: ObservableObject {
     @Injected private var presenter: HomePresenter

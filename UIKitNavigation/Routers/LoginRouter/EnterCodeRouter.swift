@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GXInject
 
 class EnterCodeRouter: RouterProtocol {
     // MARK: - Private vars

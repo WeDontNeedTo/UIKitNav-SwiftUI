@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "GXInject",
+        "repositoryURL": "https://github.com/GARPIX-iOS/garpix_inject",
+        "state": {
+          "branch": "main",
+          "revision": "73bbf742855462cda2a0ef4ac378d1d4a1b1aaca",
+          "version": null
+        }
+      },
+      {
         "package": "GXUtilz",
         "repositoryURL": "https://github.com/GARPIX-iOS/garpix_utils",
         "state": {
@@ -15,7 +24,7 @@
         "repositoryURL": "https://github.com/WeDontNeedTo/GXBaseAPI",
         "state": {
           "branch": "master",
-          "revision": "295faca672f1422cff61994244434c00820b9e97",
+          "revision": "c624c4474d514da385723a2b8372151349bfa0f7",
           "version": null
         }
       },

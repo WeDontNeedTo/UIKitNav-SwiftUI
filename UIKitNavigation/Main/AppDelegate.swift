@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GXInject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

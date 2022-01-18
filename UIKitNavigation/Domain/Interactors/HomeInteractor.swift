@@ -9,6 +9,7 @@ import Foundation
 import GXBaseAPI
 import Combine
 import CoreData
+import GXInject
 
 
 class HomeInteracor {

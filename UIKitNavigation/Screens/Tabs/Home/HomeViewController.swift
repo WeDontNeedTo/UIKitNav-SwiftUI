@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import GXInject
 
 protocol HomeViewControllerDelegate: AnyObject {
     func didTapAlcoCard(with drink: AlcoDrink)
@@ -34,6 +35,7 @@ class HomeViewController: UIViewController {
         navigationItem.searchController = searchController
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationItem.title = "Home"
         addSubSwiftUIView(HomeView(viewModel: self.viewModel, delegate: delegate), to: view)
         
         if #available(iOS 15, *) {

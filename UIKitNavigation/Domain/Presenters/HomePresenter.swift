@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import GXInject
 
 protocol HomePresenterProtocol {
     func getAlcoDrinks(isRefresh: Bool, handler: @escaping (Result<AlcoDrinkList, String>) -> Void)

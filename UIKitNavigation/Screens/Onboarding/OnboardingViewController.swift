@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SwiftUI
+import GXInject
 
 class OnboardingViewController: UIViewController {
     @Injected var viewModel: OnboardingViewModel

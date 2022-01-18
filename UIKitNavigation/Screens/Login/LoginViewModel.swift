@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GXInject
 
 class LoginViewModel: ObservableObject {
 

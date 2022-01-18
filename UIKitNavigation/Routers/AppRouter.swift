@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
+import GXInject
 
 enum AppRouterScreen {
     case onboarding

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GXInject
 
 protocol OnboardingPresenterProtocol {
     func getOnboardingData(handler: @escaping (Result<[OnboardingModel],Error>) -> Void)

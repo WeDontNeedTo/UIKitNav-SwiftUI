@@ -11,7 +11,6 @@
 		830817B22774C71C008BA695 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B12774C71C008BA695 /* PullToRefresh.swift */; };
 		830817B52774CA6A008BA695 /* AlcoCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B42774CA6A008BA695 /* AlcoCategories.swift */; };
 		830817B72774CB51008BA695 /* AlcoCategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */; };
-		8318ACDA278DB6B000F75469 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318ACD9278DB6B000F75469 /* Dependency.swift */; };
 		832599552788DA5F00BC849C /* XUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832599542788DA5F00BC849C /* XUIButton.swift */; };
 		832599572788DD7600BC849C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832599562788DD7600BC849C /* DetailView.swift */; };
 		832DFF4C27888C7D00EBEB26 /* UIImageViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832DFF4B27888C7D00EBEB26 /* UIImageViewAlignment.swift */; };
@@ -37,6 +36,7 @@
 		837183F7276A854300B45ECA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F6276A854300B45ECA /* SettingsViewController.swift */; };
 		837183F9276A855900B45ECA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183F8276A855900B45ECA /* SettingsView.swift */; };
 		837183FC276A88A700B45ECA /* UIKit + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837183FB276A88A700B45ECA /* UIKit + SwiftUI.swift */; };
+		8387D5FE27970EFB0099850D /* GXInject in Frameworks */ = {isa = PBXBuildFile; productRef = 8387D5FD27970EFB0099850D /* GXInject */; };
 		838BA53727732CF1002DB251 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53627732CF1002DB251 /* SettingsRouter.swift */; };
 		838BA53927732D9B002DB251 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53827732D9B002DB251 /* HomeRouter.swift */; };
 		838BA53B27733063002DB251 /* AlcoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838BA53A27733063002DB251 /* AlcoCard.swift */; };
@@ -86,7 +86,6 @@
 		830817B12774C71C008BA695 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		830817B42774CA6A008BA695 /* AlcoCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategories.swift; sourceTree = "<group>"; };
 		830817B62774CB51008BA695 /* AlcoCategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoCategoryDTO.swift; sourceTree = "<group>"; };
-		8318ACD9278DB6B000F75469 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		832599542788DA5F00BC849C /* XUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XUIButton.swift; sourceTree = "<group>"; };
 		832599562788DD7600BC849C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		832DFF4B27888C7D00EBEB26 /* UIImageViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAlignment.swift; sourceTree = "<group>"; };
@@ -160,6 +159,7 @@
 			files = (
 				838BA54D27734CEC002DB251 /* SDWebImageSwiftUI in Frameworks */,
 				83BEC1E7278ECCBF0054E331 /* GXBaseAPI in Frameworks */,
+				8387D5FE27970EFB0099850D /* GXInject in Frameworks */,
 				835A8C2C278CD86400022EC2 /* GXBaseAPI in Frameworks */,
 				836587CE277DB10E00296AE2 /* SnapKit in Frameworks */,
 				83FCE7802771F9B100552B98 /* GXUtilz in Frameworks */,
@@ -201,14 +201,6 @@
 				830817B42774CA6A008BA695 /* AlcoCategories.swift */,
 			);
 			path = AlcoCategories;
-			sourceTree = "<group>";
-		};
-		8318ACD8278DB6A100F75469 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				8318ACD9278DB6B000F75469 /* Dependency.swift */,
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		832599532788DA5000BC849C /* UIKit */ = {
@@ -338,7 +330,6 @@
 		8358F64C2770D1C3006779CF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8318ACD8278DB6A100F75469 /* DI */,
 				83FCE7642771DD1700552B98 /* DataServices */,
 				83FCE7632771DD0A00552B98 /* AppServices */,
 			);
@@ -618,6 +609,7 @@
 				836587CD277DB10E00296AE2 /* SnapKit */,
 				835A8C2B278CD86400022EC2 /* GXBaseAPI */,
 				83BEC1E6278ECCBF0054E331 /* GXBaseAPI */,
+				8387D5FD27970EFB0099850D /* GXInject */,
 			);
 			productName = UIKitNavigation;
 			productReference = 8347E0E82769C6FB0047E977 /* UIKitNavigation.app */;
@@ -652,6 +644,7 @@
 				838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				83BEC1E5278ECCBF0054E331 /* XCRemoteSwiftPackageReference "GXBaseAPI" */,
+				8387D5FC27970EFB0099850D /* XCRemoteSwiftPackageReference "garpix_inject" */,
 			);
 			productRefGroup = 8347E0E92769C6FB0047E977 /* Products */;
 			projectDirPath = "";
@@ -722,7 +715,6 @@
 				8347E1062769C9BC0047E977 /* HomeView.swift in Sources */,
 				83FCE78B2772084500552B98 /* LoginViewModel.swift in Sources */,
 				83FCE784277202D700552B98 /* XButton.swift in Sources */,
-				8318ACDA278DB6B000F75469 /* Dependency.swift in Sources */,
 				83FCE78E277208D100552B98 /* LoginRouter.swift in Sources */,
 				838BA544277336D9002DB251 /* AlcoDrinks.swift in Sources */,
 				832DFF4C27888C7D00EBEB26 /* UIImageViewAlignment.swift in Sources */,
@@ -963,6 +955,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		8387D5FC27970EFB0099850D /* XCRemoteSwiftPackageReference "garpix_inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GARPIX-iOS/garpix_inject";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		838BA54B27734CEC002DB251 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -998,6 +998,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 836587CC277DB10E00296AE2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		8387D5FD27970EFB0099850D /* GXInject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8387D5FC27970EFB0099850D /* XCRemoteSwiftPackageReference "garpix_inject" */;
+			productName = GXInject;
 		};
 		838BA54C27734CEC002DB251 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GXInject
 
 class LoginRouter: RouterProtocol {
     // MARK: - Private vars
